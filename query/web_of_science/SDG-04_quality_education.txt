@@ -1,0 +1,47 @@
+ (
+
+TS = ( (( "inclusi*" OR "equit*" ) AND ( "quality education" )) ) OR
+
+TS = ( (( "Quality" OR "equitabl*" OR "free" OR "access" OR "affordab*") NEAR/3 ( "Primary education" OR "primary school" OR "secondary education" OR "secondary school")) ) OR
+
+TS = ( ( "proficiency level" NEAR/3 ( "reading" OR "mathematics" )) )
+OR
+
+TS = ( ( "Quality" OR "equitabl*" OR "free" OR "access" OR "affordab*") NEAR/3 ( "preschool" OR "pre-school" OR "pre-primary education" OR "pre-primary school" OR "preprimary education" OR "preprimary school") )
+OR
+
+TS = ( ("equal" OR "equit*") NEAR/3 ("access") NEAR/3 ("tertiary education" OR "university" OR "vocational education" ) )
+OR
+
+TS = ( (( "increas*" NEAR/3 ("skills" OR "competenc*")) AND ( "employ*" OR "decent job*" OR "entrepreneur*" )) )
+OR
+
+TS = ( ( ("gender disparit*" OR "gender parit*" OR "gender inequalit*" OR "gender equalit*") AND "educat*") ) OR
+
+TS = ( ( ( "vulnerable" OR "disabilit*" OR "disabled" OR "indigen*" ) NEAR/3 "educat*" ) ) OR
+
+TS = ( ( ( "girl*" OR "women" ) AND ( "equal*" NEAR/3 "educat*" ) ) )
+OR
+
+TS = ("literacy" OR "numeracy" OR "reading skill*" OR "writing skill*" )
+OR
+
+TS = (( ( "sustainable development" ) NEAR/3 ( "educat*" OR "teach*" OR "learn*" ) ) ) OR
+
+TS = (( "sustainab*" OR "global citizenship") NEAR/3 ( "education" ) NEAR/3 ( "program*" OR "curricul*" OR "policy" OR "policies" ) )
+OR
+
+TS = (("school facilit*") ) OR
+
+TS = (( "school*" ) NEAR/3 ( "access" ) NEAR/3 ( "electricity" OR "internet" OR "computer*" ) ) OR
+
+TS = (( "school*" ) NEAR/3 ( "drinking water" OR "sanitation" OR "handwashing*" OR "hand washing*") )
+OR
+
+TS = (( "scholarships" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TS = (( "scholarships" ) NEAR/6 ( "South Africa" OR "Sub-Saharan Africa" OR "Equatorial Africa" OR "West Africa" ) )
+OR
+
+TS = ( (( "teacher*" ) NEAR/3 ("training" OR "qualified" OR "education") ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) )
+)

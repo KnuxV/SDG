@@ -1,0 +1,46 @@
+(
+
+TITLE-ABS-KEY (( "poverty" ) W/3 ( "eradicat*" OR "reduc*" OR "end" OR "ending" OR "alleviat*") ) OR
+
+TITLE-ABS-KEY (("poverty line*") OR ("poverty indicator*") ) OR
+
+TITLE-ABS-KEY (("poverty" OR "income") W/3 ("inequalit*") ) OR
+
+TITLE-ABS-KEY (("poverty") W/3 ("chronic*" OR "extreme") )
+OR
+
+TITLE-ABS-KEY ( ( "poverty" ) W/3 ( "living" OR "life" OR "child*" OR "socioeconomic*" OR "socio-economic*" OR "social welfare" OR "household*" OR "income*" ) OR ("poverty line*") )
+OR
+
+TITLE-ABS-KEY ( ("social protection" OR "economic marginalization" OR "economic marginalisation" OR "poor*" OR "vulnerable") AND ("poverty" OR "income") )
+OR
+
+TITLE-ABS-KEY (("access" OR "right*") W/3 ("economic resource*" OR "basic service*") ) OR
+
+TITLE-ABS-KEY (("ownership*") W/3 ("land") )
+OR
+
+TITLE-ABS-KEY (("resilien*") W/3 ("poverty" OR "the poor*") ) OR
+
+TITLE-ABS-KEY (("disaster*") W/3 ( "number of death*") ) OR
+
+TITLE-ABS-KEY (("disaster*") W/3 ( "economic loss*") ) OR
+
+TITLE-ABS-KEY (("disaster*") W/3 ("risk reduction*") W/3 ("strateg*") )
+OR
+
+TITLE-ABS-KEY (("poverty") W/3 ("develop*") W/3 ("cooperat*" OR "assistan*") ) OR
+
+TITLE-ABS-KEY (("poverty") W/3 ("develop*") W/3 ("program*" OR "polic*") ) OR
+
+TITLE-ABS-KEY (("government*") W/3 ("spending*") W/3 ("education*" OR "health*" OR "social protection") ) OR
+
+TITLE-ABS-KEY (("government* expenditure") W/3 ("education*" OR "health*" OR "social protection") )
+OR
+
+TITLE-ABS-KEY (("investment") W/3 ("poverty") ) OR
+
+TITLE-ABS-KEY (("government*") W/3 ("spending*") W/3 ("women" OR "poor and vulnerable") ) OR
+
+TITLE-ABS-KEY (("government* expenditure") W/3 ("women" OR "poor and vulnerable") )
+)

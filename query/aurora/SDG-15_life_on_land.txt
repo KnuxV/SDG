@@ -1,0 +1,69 @@
+(
+
+TITLE-ABS-KEY ( ( ( "sustainab*" OR "conserv*" OR "restor*" ) W/3 ( "ecosyst*" OR "terrestrial" OR "freshwater" OR "inland" OR "forest*" OR "rainforest*" OR "agroforest*" OR "deforest*" OR "reforest*" OR "afforest*" OR "environment*" OR "soil" OR "land" ) ) AND NOT ( "marine" OR "ocean*" OR "sea" OR "seas" OR "reef" ) )
+OR
+
+TITLE-ABS-KEY ( ("sustainab*") AND ("management*") AND ("forest*") ) OR
+
+TITLE-ABS-KEY ( ( "halt*" OR "combat*" OR "reduc*") W/3 ( "deforest*" ) ) OR
+
+TITLE-ABS-KEY ( ( "restor*" ) W/3 ( "degraded forest*" ) ) OR
+
+TITLE-ABS-KEY ( ( "increas*" ) W/3 ( "reforest*" OR "afforest*" ) )
+OR
+
+TITLE-ABS-KEY ( ( "halt*" OR "combat*" OR "reduc*" ) W/3 ( "desertification*" ) ) OR
+
+TITLE-ABS-KEY ( ( "restor*" ) W/3 ( "degraded land*" OR "degraded dryland*" OR "degraded soil*" ) ) OR
+
+TITLE-ABS-KEY ( ( "proportion*" OR "percentage" ) AND ( "degraded" ) W/3 ( "land*" OR "dryland*" OR "soil*" ) )
+OR
+
+TITLE-ABS-KEY ( ( "mountain*" OR "alpine" ) W/3 ( "ecosystem*" OR "biodiversity" ) ) OR
+
+TITLE-ABS-KEY ( "mountain green cover index" )
+OR
+
+TITLE-ABS-KEY ( ( "halt*" OR "combat*" OR "reduc*" ) W/3 ( "degrad*" OR "loss*" OR "destruction" OR "fragmentation" ) W/3 ( "habitat" OR "land" OR "woodland*" OR "forest*" ) ) OR
+
+TITLE-ABS-KEY ( ( "halt*" OR "combat*" OR "reduc*" ) W/3 ( "loss*" ) W/3 ( "biodiversity" ) ) OR
+
+TITLE-ABS-KEY ( ( "prevent*" ) W/3 ( "extinction" ) W/3 ( "species" ) ) OR
+
+TITLE-ABS-KEY ( "Red List Index" )
+OR
+
+TITLE-ABS-KEY ( ( ( "genetic" OR "gene*" OR "genes" ) W/3 ( "resource*" ) ) AND ( "sharing" ) )
+OR
+
+TITLE-ABS-KEY ( ( "poaching" OR "trafficking") AND ("species" OR "flora" OR "fauna" OR "wildlife") AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") )
+OR
+
+TITLE-ABS-KEY ( ( "invas*" ) W/3 ( "alien" OR "nonnative" OR "non-native" OR "nonindigenous" OR "non-indigenous" ) W/3 ( "species" OR "animal*" OR "plant*" ) AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") ) OR
+
+TITLE-ABS-KEY ( ( "protect*" ) W/3 ( "threaten*" OR "endanger*" ) W/3 ( "species" OR "animal*" OR "plant*" ) AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") ) OR
+
+TITLE-ABS-KEY ( ( ( "prevent*" ) W/3 ( "extinct*" ) ) AND ( ( "threaten*" OR "endanger*" ) W/3 ( "species" OR "animal*" OR "plant*" ) ) AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") )
+OR
+
+TITLE-ABS-KEY ( ( ( "ecosystem" W/3 "biodiversity" ) OR "species diversity" ) AND ( "polic*" OR "strateg*" OR "plan" OR "plans" OR "planning" ) AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") ) OR
+
+TITLE-ABS-KEY ( ( "Aichi Biodiversity Target*" ) OR ( "Strategic Plan for Biodiversity" ) )
+OR
+
+TITLE-ABS-KEY ( ( "ecosystem" W/3 "biodiversity" ) AND ( "financ*" ) ) OR
+
+TITLE-ABS-KEY ( ( "ecosystem" W/3 "biodiversity" ) AND ( "develop*" W/3 ( "assist*" OR "support*" OR "aid" OR "program*" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "ecosystem" W/3 "biodiversity" ) AND ( "spending" OR "expenditure" OR "GDP" OR "gross domestic product" ) )
+OR
+
+TITLE-ABS-KEY ( ("sustainab*") AND ("management*") AND ("forest*") ) OR
+
+TITLE-ABS-KEY ( ( "ecosystem" W/3 "biodiversity" ) AND ( "develop*" W/3 ( "assist*" OR "support*" OR "aid" OR "program*" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "ecosystem" W/3 "biodiversity" ) AND ( "spending" OR "expenditure" OR "GDP" OR "gross domestic product" ) )
+OR
+
+TITLE-ABS-KEY ( ( "poaching" OR "trafficking") AND ("species" OR "flora" OR "fauna" OR "wildlife") AND NOT ("marine" OR "ocean*" OR "sea" OR "seas" OR "reef") )
+)

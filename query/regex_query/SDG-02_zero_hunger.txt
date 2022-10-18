@@ -1,0 +1,38 @@
+TS = (( "hunger*" OR "famine" ) NEAR/3 ( "end" OR "ending" OR "eradicat*" OR "reduc*" OR "alleviat*" ) ) OR
+
+TS = (( "access") NEAR/3 ("food*" OR "nutrition*") NEAR/3 ("poor" OR "child*" OR "infant*") ) OR
+
+TS = (( "prevalen*" OR "hunger*" OR "famine" ) NEAR/3 ("food security" OR "food insecurity" OR "food deprivation" OR "malnutrition*" OR "undernutrition*" OR "malnourish*" OR "undernourish*") )
+OR
+
+TS = (( "child*" OR "infant*" OR "neonate*" OR "newborn*" OR "baby" OR "babies") NEAR/3 ("hunger*" OR "stunting" OR "wasting" OR "nutritional status" OR "malnutrition*" OR "undernutrition*" OR "malnourish*" OR "undernourish*")) OR
+
+TS = (( "adolescent girl*" OR "pregnant women" OR "lactating women" ) AND ("nutrition*") NEAR/3 ("need*") )
+OR
+
+TS = (("agriculture*" OR "food*") NEAR/3 ("producti*") AND ("scale" OR "small-scale") ) OR
+
+TS = (("agriculture*" OR "food*") NEAR/3 ("sustainab*") NEAR/3 ("intensificat*") )
+OR
+
+TS = ( ( "agricultur*" NEAR/6 ( "sustainab*" OR "resilien*" ) ) OR ( "food production" NEAR/3 ( "sustainab*" OR "resilien*" ) ) OR ( "future" AND "high*" NEAR/3 "food demand" ) )
+OR
+
+TS = (( "genetic diversity" OR "biodiversity") NEAR/3 ("maintain*" OR "conserve*") AND ("seed*" OR "cultivated plant*" OR "farmed animal*" OR "domesticated animal*") )
+OR
+
+TS = ( ( "agricultur*" ) AND ( "investment*" OR "investing*" ) AND ( "developing countr*" ) )
+OR
+
+TS = (( "agricultur*" ) NEAR/3 ( ( "world" ) NEAR/3 ( "market" ) ) ) OR
+
+TS = (("agricultur*") AND ( ("trade" OR "import" OR "export") NEAR/3 ("restriction*" OR "distort*" OR "subsid*")) ) OR
+
+TS = (("agricultur*") AND ("Doha development round") ) OR
+
+TS = (("producer support estimate") )
+OR
+
+TS = (("food price*") NEAR/3 ("volatil*") ) OR
+
+TS = (("food*") NEAR/3 ("commodit*") NEAR/3 ("market*") )

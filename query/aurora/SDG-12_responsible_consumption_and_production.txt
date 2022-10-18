@@ -1,0 +1,52 @@
+(
+
+TITLE-ABS-KEY ( ( "sustainab*" ) W/3 ( "consum*" OR "product*" ) )
+OR
+
+TITLE-ABS-KEY ( ( "sustainab*" ) AND ( "natural resource*" ) ) OR
+
+TITLE-ABS-KEY ( ( "sustainab*" OR "efficien*" ) AND ( "natural resource*" ) ) OR
+
+TITLE-ABS-KEY ( ( "material" OR "carbon" OR "water" ) W/3 ( "footprint*" ) ) OR
+
+TITLE-ABS-KEY ( (( "material*" ) W/3 ( "consumption" )) AND ( "domestic" OR "household*" ) )
+OR
+
+TITLE-ABS-KEY ( ( "food" ) W/3 ( "wast*" OR "loss*" OR "spoil*" ) ) OR
+
+TITLE-ABS-KEY ( "postharvest loss*" OR "post-harvest loss*" )
+OR
+
+TITLE-ABS-KEY ( "Life Cycle Analysis" OR "Life Cycle Assessment" ) OR
+
+TITLE-ABS-KEY ( ( "Life Cycle" ) AND ( ( "hazardous" OR "toxic" ) W/3 ( "chemical*" OR "waste*" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "per capita" ) AND ( ( "hazardous" OR "toxic" ) W/3 ( "chemical*" OR "waste*" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( "prevent*" OR "reduc*" ) W/3 ( "chemical*" OR "waste*" ) W/3 ( "recycl*" OR "reuse" OR "reusing" OR "air" OR "water" OR "soil") ) OR
+
+TITLE-ABS-KEY ( ( "National" ) W/3 ( "recycling rate" ) ) OR
+
+TITLE-ABS-KEY ( ( "tons" ) W/3 ( ( "material*" ) W/3 ( "recycle*" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( "sustainab*" ) W/3 ( "practice*" OR "information*" OR "report*" ) AND ( "compan*" OR "firm*" OR "corporate" OR "business*" ) )
+OR
+
+TITLE-ABS-KEY ( ( ( "sustainab*" ) W/3 ( "procurement*" OR "buying" ) ) AND ( "policy" OR "policies" OR "priorit*" OR "action*" ) )
+OR
+
+TITLE-ABS-KEY ( ( ( "sustainab*" OR "global citizenship" ) W/3 ( "information" OR "awareness" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "sustainab*" OR "global citizenship") W/3 ( "education" ) W/3 ( "program*" OR "curricul*" OR "policy" OR "policies" ) )
+OR
+
+TITLE-ABS-KEY ( ( "sustainab*" ) W/3 ( "consum*" OR "product*" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) )
+OR
+
+TITLE-ABS-KEY ( ( ( "sustainab*" ) W/3 ( "tourism*" ) ))
+OR
+
+TITLE-ABS-KEY ( ( "subsid*" OR "tax*" ) W/3 ( "fossil-fuel*" OR "coal*" OR "petrol*") )
+)

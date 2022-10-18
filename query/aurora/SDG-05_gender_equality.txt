@@ -1,0 +1,62 @@
+(
+
+TITLE-ABS-KEY (("discrimination") W/3 ( "sexual" OR "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY (( "law*" OR "legislation*" OR "legal*" ) AND (( "equality" ) W/3 ( "sexual" OR "gender*" OR "women" OR "female" OR "girl*" ) ) )
+OR
+
+TITLE-ABS-KEY (( ( "violence" ) W/3 ( "sexual" OR "physical" OR "psychological" ) ) AND ( "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY ("human trafficking" )
+OR
+
+TITLE-ABS-KEY (( "genital mutilation" OR "genital cutting" ) AND ( "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY (( "female circumcision*" ) ) OR
+
+TITLE-ABS-KEY ("child* marriage*" ) OR
+
+TITLE-ABS-KEY (("forced marriage*" OR "early marriage*" ) W/3 ( "women" OR "female" OR "girl*" ) )
+OR
+
+TITLE-ABS-KEY (( "domestic work" OR "household work") AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY (( "unpaid care" OR "unpaid work") AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY ((( "shared responsibility" ) W/3 ( "household" ) ) AND ( "gender" OR "women" OR "female" OR "girl*" ) )
+OR
+
+TITLE-ABS-KEY (( ( "participati*" OR "opportuni*" ) W/3 ( "leadership*" ) ) AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY ( ( ( "seat*" OR "number*" ) W/3 ( "parliament*" OR "government*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY ( ( ( "seat*" OR "number*" ) W/3 ( "manager*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY ( ( ( "glass ceiling*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) )
+OR
+
+TITLE-ABS-KEY ("reproductive rights" ) OR
+
+TITLE-ABS-KEY (( "Access" ) AND ( "Sexual health care" OR "Sexual healthcare" OR "Reproductive health care" OR "Reproductive healthcare" ) ) OR
+
+TITLE-ABS-KEY (( ( "own" OR "informed" ) W/3 ( "decision" ) W/3 ( "sexual" OR "contracepti*" OR "reproducti*" OR "family planning" OR "parenting plan*" OR "abortion" ) ) ) OR
+
+TITLE-ABS-KEY (( "Access" ) AND ( "Sexual information" OR "Sexual education" OR "Reproductive information" OR "Reproductive education" ) )
+OR
+
+TITLE-ABS-KEY ("women's property rights" ) OR
+
+TITLE-ABS-KEY ((("property" OR "ownership*" OR "right*" OR "control*") W/3 ("land")) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY (("landowner*" OR "land owner*") AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TITLE-ABS-KEY (( ("property" OR "ownership*" OR "right*" OR "control*" ) W/3 ("natural resource*" OR "economic resource*")) AND ("gender" OR "women*" OR "female" OR "girl*") )
+OR
+
+TITLE-ABS-KEY ((("technolog*") AND (("empower*") W/3 ("women*" OR "female" OR "girl*"))) )
+OR
+
+TITLE-ABS-KEY ( ( ( "empower*" OR "discrimination*" OR "equalit*" OR "inequalit*" OR "disparity" OR "indisparity" OR "diversity" ) W/3 ( "gender" OR "women*" OR "female" OR "girl*" ) ) AND ( "policy" OR "policies" OR "legislation*" OR "law*" ) ) OR
+
+TITLE-ABS-KEY (( "women's rights" OR "governance and gender" OR "third wave feminism" OR "sexism" ) AND ( "policy" OR "policies" OR "legislation*" OR "law*" ) )
+)

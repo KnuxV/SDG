@@ -1,0 +1,62 @@
+(
+
+TS = (("discrimination") NEAR/3 ( "sexual" OR "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = (( "law*" OR "legislation*" OR "legal*" ) AND (( "equality" ) NEAR/3 ( "sexual" OR "gender*" OR "women" OR "female" OR "girl*" ) ) )
+OR
+
+TS = (( ( "violence" ) NEAR/3 ( "sexual" OR "physical" OR "psychological" ) ) AND ( "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = ("human trafficking" )
+OR
+
+TS = (( "genital mutilation" OR "genital cutting" ) AND ( "gender*" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = (( "female circumcision*" ) ) OR
+
+TS = ("child* marriage*" ) OR
+
+TS = (("forced marriage*" OR "early marriage*" ) NEAR/3 ( "women" OR "female" OR "girl*" ) )
+OR
+
+TS = (( "domestic work" OR "household work") AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = (( "unpaid care" OR "unpaid work") AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = ((( "shared responsibility" ) NEAR/3 ( "household" ) ) AND ( "gender" OR "women" OR "female" OR "girl*" ) )
+OR
+
+TS = (( ( "participati*" OR "opportuni*" ) NEAR/3 ( "leadership*" ) ) AND ( "gender" OR "women" OR "female" OR "girl*" ) ) OR
+
+TS = ( ( ( "seat*" OR "number*" ) NEAR/3 ( "parliament*" OR "government*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TS = ( ( ( "seat*" OR "number*" ) NEAR/3 ( "manager*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TS = ( ( ( "glass ceiling*" ) ) AND ( "gender" OR "women*" OR "female" OR "girl*" ) )
+OR
+
+TS = ("reproductive rights" ) OR
+
+TS = (( "Access" ) AND ( "Sexual health care" OR "Sexual healthcare" OR "Reproductive health care" OR "Reproductive healthcare" ) ) OR
+
+TS = (( ( "own" OR "informed" ) NEAR/3 ( "decision" ) NEAR/3 ( "sexual" OR "contracepti*" OR "reproducti*" OR "family planning" OR "parenting plan*" OR "abortion" ) ) ) OR
+
+TS = (( "Access" ) AND ( "Sexual information" OR "Sexual education" OR "Reproductive information" OR "Reproductive education" ) )
+OR
+
+TS = ("women's property rights" ) OR
+
+TS = ((("property" OR "ownership*" OR "right*" OR "control*") NEAR/3 ("land")) AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TS = (("landowner*" OR "land owner*") AND ( "gender" OR "women*" OR "female" OR "girl*" ) ) OR
+
+TS = (( ("property" OR "ownership*" OR "right*" OR "control*" ) NEAR/3 ("natural resource*" OR "economic resource*")) AND ("gender" OR "women*" OR "female" OR "girl*") )
+OR
+
+TS = ((("technolog*") AND (("empower*") NEAR/3 ("women*" OR "female" OR "girl*"))) )
+OR
+
+TS = ( ( ( "empower*" OR "discrimination*" OR "equalit*" OR "inequalit*" OR "disparity" OR "indisparity" OR "diversity" ) NEAR/3 ( "gender" OR "women*" OR "female" OR "girl*" ) ) AND ( "policy" OR "policies" OR "legislation*" OR "law*" ) ) OR
+
+TS = (( "women's rights" OR "governance and gender" OR "third wave feminism" OR "sexism" ) AND ( "policy" OR "policies" OR "legislation*" OR "law*" ) )
+)

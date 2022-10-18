@@ -1,0 +1,81 @@
+ (
+
+TS = ( ( "economic" NEAR/3 "growth*" ) NEAR/3 ("per capita" OR "sustain") ) OR
+
+TS = ( ( "economic" NEAR/3 "growth*" ) NEAR/3 ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TS = ( ( "growth*" ) NEAR/3 ( "gross domestic product" OR "GDP" ) )
+OR
+
+TS = ( ( "economic productivity" ) ) OR
+
+TS = ( ("economic" ) AND ( "productivity" ) AND ( "diversif*" OR "upgrad*" OR "innovat*" ) ) OR
+
+TS = ( ( "growth*" ) NEAR/3 ( "gross domestic product" OR "GDP" ) )
+OR
+
+TS = ( ( "decent job" ) OR ( "decent work" ) OR ( "job creat*" ) OR ( "quality job*" ) ) OR
+
+TS = ( ( "develop*" ) NEAR/3 ( ( "product* activit*" ) OR ( "labor produc*" ) OR ( "entrepreneurship" ) ) ) OR
+
+TS = ( ( "informal*" ) NEAR/3 ( "employment*" ) )
+OR
+
+TS = ( ( "resource efficiency" ) ) OR
+
+TS = ( ( "material*") NEAR/3 ("footprint*" ) ) OR
+
+TS = ( ( "domestic") NEAR/3 ("material*") NEAR/3 ("consumption*" ) )
+OR
+
+TS = ( ( "full employment" ) OR ( ( "equal pay*" ) NEAR/3 ( "work*" ) ) ) OR
+
+TS = ( ( "decent job" ) OR ( "decent work" ) ) OR
+
+TS = ( ( "hourly earning*" ) ) OR
+
+TS = ( ( "equal*" OR "inequal*" ) NEAR/3 ( "pay*" ) NEAR/3 ( "work*" ) ) OR
+
+TS = ( ( "wage*" ) NEAR/3 ( "gap" OR "differen*" ) ) OR
+
+TS = ( ( "unemployment rate*" ) NEAR/3 ( "sex" OR "gender" OR "age" OR "disability" ) )
+OR
+
+TS = ( ( ( "youth" OR "young people" ) NEAR/3 ( "employ*" OR "unemploy*" ) ) )
+OR
+
+TS = ( ( "force* labo*" ) OR ( "modern slavery" ) OR ( "human* traffic*" ) OR ( "child* labo*" ) OR ( "child* slavery" ) OR ( "child* traffick*" ) OR ( "child* work*" ) )
+OR
+
+TS = ( ( "labour right*" ) OR ( "labor right*" ) ) OR
+
+TS = ( ( "safe" OR "secure" ) NEAR/3 ( "work* environment*" ) ) OR
+
+TS = ( ( "occupational injur*" ) NEAR/3 ( "rate*" OR "frequen*" ) ) OR
+
+TS = ( ( "international labor organization" ) )
+OR
+
+TS = ( ("sustaina*") NEAR/3 ("tourism") ) OR
+
+TS = ( ( "GDP" OR "Gross Domestic Product" ) NEAR/3 ( "tourism" ) ) OR
+
+TS = ( ( "job*" ) NEAR/3 ( "tourism" ) )
+OR
+
+TS = ( ( "micro-financ*" ) OR ( "microfinanc*" ) ) OR
+
+TS = ( "access" NEAR/3 ( "financial service*" OR "banking" OR "insurance*") )
+OR
+
+TS = ( ((("trad*") NEAR/3 ("support*" OR "assist*" OR "aid")) AND ( "develop* countr*" OR "least developed countr*" )) ) OR
+
+TS = ( ( "aid for trade" ) )
+OR
+
+TS = ( ( "Global Jobs Pact" ) ) OR
+
+TS = ( ( "strateg*" OR "polic*" ) AND ( ( "youth" OR "young people" ) NEAR/3 ( "employ*" OR "unemploy*" ) ) ) OR
+
+TS = ( ( "social protection" OR "employment program*" ) AND ( "GDP" OR "Gross Domestic Product" ) )
+)

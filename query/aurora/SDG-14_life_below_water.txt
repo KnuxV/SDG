@@ -1,0 +1,39 @@
+(
+
+TITLE-ABS-KEY ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "pollut*" OR "debris" OR "eutrophication*" OR "contaminat*" OR "waste" OR "plastic*" OR "microplastic*" OR "micro-plastic*" ) )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("ecosystem*" OR "biodivers*" OR "protection" OR "environmental degradation" ) )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("acidi*" OR "pH") )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("overfish*" OR "fisheries" OR "fishery" OR "fish stock*" OR "fishing") )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "protected" OR "conserv*" ) W/3 ( "area*" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "fish stock" ) )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND (( "sustainab*" ) W/3 ( "fish*" OR "aquaculture*" OR "tourism*" )) )
+OR
+
+TITLE-ABS-KEY ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "research" ) W/3 ( "develop*" OR "budget*" OR "spending" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "knowledge" ) W/3 ( "develop*" OR "increase*" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "transfer" ) W/3 ( "technology" ) ) )
+OR
+
+TITLE-ABS-KEY ( ("small-scale") W/3 ("fish*") )
+OR
+
+TITLE-ABS-KEY ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("sustainab*" OR "preserv*" OR "conserv*" OR "protect*") AND ("jurisdiction*" OR "legal" OR "law*") ) OR
+
+TITLE-ABS-KEY ( ("sustainab*" OR "preserv*" OR "conserv*" OR "protect*") AND ( "UNCLOS" OR "UN Convention on the Law of the Sea" OR "United Nations Convention on the Law of the Sea" ) )
+)

@@ -1,0 +1,46 @@
+(
+
+TS = (( "poverty" ) NEAR/3 ( "eradicat*" OR "reduc*" OR "end" OR "ending" OR "alleviat*") ) OR
+
+TS = (("poverty line*") OR ("poverty indicator*") ) OR
+
+TS = (("poverty" OR "income") NEAR/3 ("inequalit*") ) OR
+
+TS = (("poverty") NEAR/3 ("chronic*" OR "extreme") )
+OR
+
+TS = ( ( "poverty" ) NEAR/3 ( "living" OR "life" OR "child*" OR "socioeconomic*" OR "socio-economic*" OR "social welfare" OR "household*" OR "income*" ) OR ("poverty line*") )
+OR
+
+TS = ( ("social protection" OR "economic marginalization" OR "economic marginalisation" OR "poor*" OR "vulnerable") AND ("poverty" OR "income") )
+OR
+
+TS = (("access" OR "right*") NEAR/3 ("economic resource*" OR "basic service*") ) OR
+
+TS = (("ownership*") NEAR/3 ("land") )
+OR
+
+TS = (("resilien*") NEAR/3 ("poverty" OR "the poor*") ) OR
+
+TS = (("disaster*") NEAR/3 ( "number of death*") ) OR
+
+TS = (("disaster*") NEAR/3 ( "economic loss*") ) OR
+
+TS = (("disaster*") NEAR/3 ("risk reduction*") NEAR/3 ("strateg*") )
+OR
+
+TS = (("poverty") NEAR/3 ("develop*") NEAR/3 ("cooperat*" OR "assistan*") ) OR
+
+TS = (("poverty") NEAR/3 ("develop*") NEAR/3 ("program*" OR "polic*") ) OR
+
+TS = (("government*") NEAR/3 ("spending*") NEAR/3 ("education*" OR "health*" OR "social protection") ) OR
+
+TS = (("government* expenditure") NEAR/3 ("education*" OR "health*" OR "social protection") )
+OR
+
+TS = (("investment") NEAR/3 ("poverty") ) OR
+
+TS = (("government*") NEAR/3 ("spending*") NEAR/3 ("women" OR "poor and vulnerable") ) OR
+
+TS = (("government* expenditure") NEAR/3 ("women" OR "poor and vulnerable") )
+)

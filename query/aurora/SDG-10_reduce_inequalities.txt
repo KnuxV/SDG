@@ -1,0 +1,45 @@
+(
+
+TITLE-ABS-KEY ( ( ( "income*" ) W/3 ( "growth*" ) ) AND ( "poorest" OR "disadvantaged" OR "marginali*" ) ) OR
+
+TITLE-ABS-KEY ( ( ( "income*" ) W/3 ( "equal*" OR "inequal*" OR "distribution" ) ) W/3 ( "poorest" OR "disadvantaged" OR "marginali*" ) ) OR
+
+TITLE-ABS-KEY ( ("growth rate*") W/3 ("income*" OR "per capita" OR "household expenditure") )
+OR
+
+TITLE-ABS-KEY ( ( "social*" OR "socioeconomic*" OR "economic*" OR "politic*" ) W/3 ( "inclusion" OR "exclusion" ) )
+OR
+
+TITLE-ABS-KEY ( ( "reduc*" ) W/3 ( "equality" OR "inequalit*" ) W/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) ) OR
+
+TITLE-ABS-KEY ( ( "discriminat*" ) W/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) ) OR
+
+TITLE-ABS-KEY ( ( "opportun*" ) W/3 ( "equal*" ) W/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) )
+OR
+
+TITLE-ABS-KEY ( ( ( "polic*" OR "legislati*" OR "law*" OR "action*" OR "practice*" ) W/3 ( "fiscal" OR "wage*" OR "social protection" ) ) AND ( "equality" ) ) OR
+
+TITLE-ABS-KEY ( ( ( "labour" OR "labor" OR "wage*" OR "social protection" ) W/3 ( "share" ) ) AND ( "GDP" OR "gross domestic product" ) )
+OR
+
+TITLE-ABS-KEY ( ( "regulat*" OR "monitor*" ) AND ( ( "global*" ) W/6 ( "financial market*" OR "financial institution*" ) ) ) OR
+
+TITLE-ABS-KEY ( ("Financial Soundness") AND ("Indicator*") )
+OR
+
+TITLE-ABS-KEY ( ( ( "representation" OR "voice" OR "voting right*" ) W/3 ( "international*" )) AND ( "developing countr*" ) )
+OR
+
+TITLE-ABS-KEY ( ("migration polic*") )
+OR
+
+TITLE-ABS-KEY ( ( "WTO" OR "World Trade Organization" OR "World Trade Organisation" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TITLE-ABS-KEY ( ( ( ( "import*" OR "trad*" ) W/3 ( "tarif*" ) ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( ( ( "development*" ) W/3 ( "assist*" OR "support*" OR "program*" ) ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) AND ( "financial*" OR "donor" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( "remittance" ) AND ( "migrant*" OR "emigrant*" OR "immigrant*" ) )
+)

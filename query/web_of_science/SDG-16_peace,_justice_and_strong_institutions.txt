@@ -1,0 +1,81 @@
+(
+
+TS = ( ( "reduc*" ) NEAR/3 ( "violence" OR "homicide" ) ) OR
+
+TS = ( ( "violen*" ) NEAR/3 ( "related" ) NEAR/3 ( "death*" ) ) OR
+
+TS = ( ( ( "victim*" ) NEAR/3 ( "homicide" ) ) AND ( "number*" OR "per capita" OR "population" ) ) OR
+
+TS = ( ( ( "conflict*" ) NEAR/3 ( "death*" ) ) AND ( "number*" OR "per capita" OR "population" ) ) OR
+
+TS = ( ( ( "physical*" OR "psychological" OR "sexual" ) NEAR/3 ( "violen*" ) ) AND ( "number*" OR "per capita" OR "population" ) ) OR
+
+TS = ( ( ( "safe" ) NEAR/3 ( "walking*" ) ) AND ( "number*" OR "per capita" OR "population" ) )
+OR
+
+TS = ( ( ( "end" OR "ending" OR "reduc*" ) NEAR/3 ( "abus*" OR "exploit*" OR "traffick*" OR "violen*" OR "tortur*" OR "neglect*" ) NEAR/3 ( "child*" ) ) ) OR
+
+TS = ( ( ( "caregiver*" ) AND ( "abus*" OR "exploit*" OR "traffick*" OR "violen*" OR "tortur*" OR "neglect*" ) NEAR/3 ( "child*" ) ) ) OR
+
+TS = ( ( ( "victim*" ) AND ( "human traffick*" ) ) ) OR
+
+TS = ( ( ( ( ( "sexual*" ) NEAR/3 ( "violen*" ) ) AND ( "young" ) ) AND ( "number*" OR "per capita" OR "population" ) ) ) OR
+
+TS = ( "Children's Right*" )
+OR
+
+TS = ( "rule of law" ) OR
+
+TS = ( ( "access*" ) NEAR/3 ( "justice" ) ) OR
+
+TS = ( ( "victim*" ) NEAR/3 ( "report*" ) )
+OR
+
+TS = ( ( "organised crime" ) OR ( "organized crime" ) ) OR
+
+TS = ( ( "illegal" OR "illicit" ) NEAR/3 ( "financ*" OR "arms" ) ) OR
+
+TS = ( ( "recover*" OR "return*" ) NEAR/3 ( "stolen" ) ) OR
+
+TS = ( ( "money" ) NEAR/3 ( "launder*" ) )
+OR
+
+TS = ( ("corruption" OR "bribe*" OR "miscarriage of justice" ) )
+OR
+
+TS = ( ( "effective" OR "accountable" OR "transparent" ) NEAR/3 ( "institution*" ) ) OR
+
+TS = ( ( "satisf*" OR "experience*" ) NEAR/3 ( "public service*" ) )
+OR
+
+TS = ( ( "decision making" ) NEAR/3 ( "responsive" OR "inclusive" OR "participat*" OR "represent*" ) ) OR
+
+TS = ( "inclusive societ*" ) OR
+
+TS = ( ( "people*" OR "women" OR "men" ) NEAR/3 ( "participat*" OR "position*" ) NEAR/3 ( "institution*" OR "government*" OR "municipal*" OR "judiciary" OR "public service*" OR "legislature" OR "parliament*" ) )
+OR
+
+TS = ( ( ( "participat*" OR "representation" OR "voice" OR "voting right*" ) NEAR/3 ( "international*" OR "global" ) ) AND ( "develop* countr*" ) ) OR
+
+TS = ( ( "Nongovernmental Organisation*" OR "Nongovernmental Organization*" OR "Non-governmental Organisation*" OR "Non-governmental Organization*" OR "NGO*" ) AND ( "develop* countr*" ) )
+OR
+
+TS = ( "legal identity" ) OR
+
+TS = ( ("birth") NEAR/3 ("regist*") AND ("authorit*" OR "municipal*") )
+OR
+
+TS = ( ( "public*" ) NEAR/3 ( "access*" ) NEAR/3 ( "information*" ) ) OR
+
+TS = ( ( "fundamental freedom*" ) OR ( ( "free*" ) NEAR/3 ( "speech*" OR "press" ) ) ) OR
+
+TS = ( ( "case*" ) AND ( ( "kill*" OR "murder*" OR "attack*" OR "kidnap*" OR "disappear*" OR "arbitrary detention*" OR "tortur*" ) NEAR/3 ( "journalist*" OR "media personnel*" OR "trade union*" OR "lawyer*" OR "advocates" ) ) )
+OR
+
+TS = ( ( "institution*" ) AND ( ( "prevent*" OR "combat*" ) NEAR/3 ( "violence" OR "terrorism*" OR "crime" ) ) ) OR
+
+TS = ( ( "institution*" ) AND ( "human right*" OR "civil right*" OR "child right*" ) )
+OR
+
+TS = ( ( "discriminat*" OR "non-discriminat*" OR "nondiscriminat*" ) AND ( "policy" OR "policies" OR "legislation*" OR "law*" ) )
+)

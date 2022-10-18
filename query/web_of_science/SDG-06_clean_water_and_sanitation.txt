@@ -1,0 +1,43 @@
+(
+
+TS = ( ( "drinking" NEAR/3 "water" ) NEAR/3 ( "access*" OR "afford*" OR "safe*" OR "secur*" ) )
+OR
+
+TS = (( "sanitation" OR "toilet*" ) NEAR/3 ( "access*" ) ) OR
+
+TS = (( "sanitation management" OR "managed sanitation" ) ) OR
+
+TS = (( "end" OR "ending" ) NEAR/3 ( "open defecation*" OR "open defaecation*" ) ) OR
+
+TS = (( "hand washing" OR "handwashing" ) NEAR/3 ( "facilit*" ) ) OR
+
+TS = (( "sewerage*" ) AND ( "develop* countr*" ) )
+OR
+
+TS = (( "reduc*" ) NEAR/3 ( "water*" ) NEAR/3 ( "pollution" OR "contamination" ) ) OR
+
+TS = (( "increase*" ) NEAR/3 ( "water*" ) NEAR/3 ( "safe* reus*" OR "recycl*" ) ) OR
+
+TS = (( "wastewater*" OR "waste water*" OR "sewage" ) NEAR/3 ( "manage*" OR "treat*" OR "untreat*" ) ) OR
+
+TS = (( "good" OR "poor" OR "improve" ) NEAR/3 ( "water quality" ) )
+OR
+
+TS = ( ( "efficien*" NEAR/3 ( "water*" OR "freshwater*" ) NEAR/3 ( "use" OR "supply*" OR "availab*" ) ) ) OR
+
+TS = ( ( "water scarc*" OR "water short*" ) )
+OR
+
+TS = (( "water*" ) NEAR/3 ( "resource* manage*" OR "cooperation*" ) ) OR
+
+TS = (( "address*" OR "coping" OR "polic*") NEAR/3 ( "water scarc*" OR "water short*" ) )
+OR
+
+TS = ( ("water*") NEAR/3 ("ecosystem*") )
+OR
+
+TS = ( ( "water*" OR "sanitation*" ) NEAR/3 (( "development*" ) NEAR/3 ( "assist*" OR "support*" OR "program*" ) ) )
+OR
+
+TS = (( "water*" OR "sanitation*" ) NEAR/3 ( "local" NEAR/3 ( "communit*" OR "administrat*" ) ) )
+)

@@ -1,0 +1,26 @@
+(
+
+TITLE-ABS-KEY ( ( ( "access" ) W/3 ( "affordable" OR "reliable" OR "modern" ) W/3 ( "energy" OR "electricity" ) ) )
+OR
+
+TITLE-ABS-KEY ( ( "share" OR "increas*" OR "promot*" ) W/3 ( ( "renewable" OR "alternative" OR "clean" ) W/3 ( "energy" OR "fuel" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "share" OR "increas*" OR "promot*" ) W/3 ( ( "energy" ) W/3 ( "conversion" OR "transition" ) ) ) OR
+
+TITLE-ABS-KEY ( ( "share" OR "increas*" OR "promot*" ) W/3 ( "Biofuel*" OR "Biogas*" OR "Heat pump*" OR "Hybrid power" OR "Solar energy" OR "Solar power" OR "Wind energy" OR "Wind farm*" OR "Wind power" OR "Wind turbine*" ) )
+OR
+
+TITLE-ABS-KEY (( ( "improv*" ) W/3 ( "energy" ) W/3 ( "efficiency" ) ) ) OR
+
+TITLE-ABS-KEY (( ( "reduc*" ) W/3 ( "energy consumption" ) ) ) OR
+
+TITLE-ABS-KEY (( ( "energy intensity" OR "energy consumption" ) W/3 ( "primary" OR "GDP" ) ) )
+OR
+
+TITLE-ABS-KEY ( ("energy") AND ("international" W/3 "cooperation") )
+OR
+
+TITLE-ABS-KEY ( ( ( ( "modern" OR "sustainable" ) W/3 "energy" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) ) OR
+
+TITLE-ABS-KEY ( ( ( "investment" ) W/3 ( "energy" ) ) AND ( "GDP" ) )
+)

@@ -1,0 +1,21 @@
+(economic\W+(?:\w+\W+){0,3}?growth\w*)\W+(?:\w+\W+){0,3}?(per capita|sustain)|(economic\W+(?:\w+\W+){0,3}?(per capita|sustain)\W+(?:\w+\W+){0,3}?growth\w*)|growth\w*)\W+(?:\w+\W+){0,3}?(economic\W+(?:\w+\W+){0,3}?(per capita|sustain)|growth\w*)\W+(?:\w+\W+){0,3}?(per capita|sustain)\W+(?:\w+\W+){0,3}?(economic|(per capita|sustain)\W+(?:\w+\W+){0,3}?(economic\W+(?:\w+\W+){0,3}?growth\w*)|(per capita|sustain)\W+(?:\w+\W+){0,3}?growth\w*)\W+(?:\w+\W+){0,3}?(economic
+(economic\W+(?:\w+\W+){0,3}?growth\w*)\W+(?:\w+\W+){0,3}?(develop\w* countr\w*|least developed countr\w*|small island\w*)|(economic\W+(?:\w+\W+){0,3}?(develop\w* countr\w*|least developed countr\w*|small island\w*)\W+(?:\w+\W+){0,3}?growth\w*)|growth\w*)\W+(?:\w+\W+){0,3}?(economic\W+(?:\w+\W+){0,3}?(develop\w* countr\w*|least developed countr\w*|small island\w*)|growth\w*)\W+(?:\w+\W+){0,3}?(develop\w* countr\w*|least developed countr\w*|small island\w*)\W+(?:\w+\W+){0,3}?(economic|(develop\w* countr\w*|least developed countr\w*|small island\w*)\W+(?:\w+\W+){0,3}?(economic\W+(?:\w+\W+){0,3}?growth\w*)|(develop\w* countr\w*|least developed countr\w*|small island\w*)\W+(?:\w+\W+){0,3}?growth\w*)\W+(?:\w+\W+){0,3}?(economic
+(growth\w*)\W+(?:\w+\W+){0,3}?(gross domestic product|GDP)|(gross domestic product|GDP)\W+(?:\w+\W+){0,3}?(growth\w*)
+(growth\w*)\W+(?:\w+\W+){0,3}?(gross domestic product|GDP)|(gross domestic product|GDP)\W+(?:\w+\W+){0,3}?(growth\w*)
+(develop\w*)\W+(?:\w+\W+){0,3}?((product\w* activit\w*)|(labor produc\w*)|(entrepreneurship))|((product\w* activit\w*)|(labor produc\w*)|(entrepreneurship))\W+(?:\w+\W+){0,3}?(develop\w*)
+(informal\w*)\W+(?:\w+\W+){0,3}?(employment\w*)|(employment\w*)\W+(?:\w+\W+){0,3}?(informal\w*)
+(material\w*)\W+(?:\w+\W+){0,3}?(footprint\w*)|(footprint\w*)\W+(?:\w+\W+){0,3}?(material\w*)
+(domestic)\W+(?:\w+\W+){0,3}?(material\w*)\W+(?:\w+\W+){0,3}?(consumption\w*)|(domestic)\W+(?:\w+\W+){0,3}?(consumption\w*)\W+(?:\w+\W+){0,3}?(material\w*)|(material\w*)\W+(?:\w+\W+){0,3}?(domestic)\W+(?:\w+\W+){0,3}?(consumption\w*)|(material\w*)\W+(?:\w+\W+){0,3}?(consumption\w*)\W+(?:\w+\W+){0,3}?(domestic)|(consumption\w*)\W+(?:\w+\W+){0,3}?(domestic)\W+(?:\w+\W+){0,3}?(material\w*)|(consumption\w*)\W+(?:\w+\W+){0,3}?(material\w*)\W+(?:\w+\W+){0,3}?(domestic)
+(full employment)|((equal pay\w*)\W+(?:\w+\W+){0,3}?(work\w*))|(work\w*))\W+(?:\w+\W+){0,3}?(full employment)|((equal pay\w*)
+(equal\w*|inequal\w*)\W+(?:\w+\W+){0,3}?(pay\w*)\W+(?:\w+\W+){0,3}?(work\w*)|(equal\w*|inequal\w*)\W+(?:\w+\W+){0,3}?(work\w*)\W+(?:\w+\W+){0,3}?(pay\w*)|(pay\w*)\W+(?:\w+\W+){0,3}?(equal\w*|inequal\w*)\W+(?:\w+\W+){0,3}?(work\w*)|(pay\w*)\W+(?:\w+\W+){0,3}?(work\w*)\W+(?:\w+\W+){0,3}?(equal\w*|inequal\w*)|(work\w*)\W+(?:\w+\W+){0,3}?(equal\w*|inequal\w*)\W+(?:\w+\W+){0,3}?(pay\w*)|(work\w*)\W+(?:\w+\W+){0,3}?(pay\w*)\W+(?:\w+\W+){0,3}?(equal\w*|inequal\w*)
+(wage\w*)\W+(?:\w+\W+){0,3}?(gap|differen\w*)|(gap|differen\w*)\W+(?:\w+\W+){0,3}?(wage\w*)
+(unemployment rate\w*)\W+(?:\w+\W+){0,3}?(sex|gender|age|disability)|(sex|gender|age|disability)\W+(?:\w+\W+){0,3}?(unemployment rate\w*)
+((youth|young people)\W+(?:\w+\W+){0,3}?(employ\w*|unemploy\w*))|(employ\w*|unemploy\w*))\W+(?:\w+\W+){0,3}?((youth|young people)
+(safe|secure)\W+(?:\w+\W+){0,3}?(work\w* environment\w*)|(work\w* environment\w*)\W+(?:\w+\W+){0,3}?(safe|secure)
+(occupational injur\w*)\W+(?:\w+\W+){0,3}?(rate\w*|frequen\w*)|(rate\w*|frequen\w*)\W+(?:\w+\W+){0,3}?(occupational injur\w*)
+(sustaina\w*)\W+(?:\w+\W+){0,3}?(tourism)|(tourism)\W+(?:\w+\W+){0,3}?(sustaina\w*)
+(GDP|Gross Domestic Product)\W+(?:\w+\W+){0,3}?(tourism)|(tourism)\W+(?:\w+\W+){0,3}?(GDP|Gross Domestic Product)
+(job\w*)\W+(?:\w+\W+){0,3}?(tourism)|(tourism)\W+(?:\w+\W+){0,3}?(job\w*)
+access\W+(?:\w+\W+){0,3}?(financial service\w*|banking|insurance\w*)|(financial service\w*|banking|insurance\w*)\W+(?:\w+\W+){0,3}?access
+(((trad\w*)\W+(?:\w+\W+){0,3}?(support\w*|assist\w*|aid)) (develop\w* countr\w*|least developed countr\w*))|(support\w*|assist\w*|aid)) (develop\w* countr\w*|least developed countr\w*))\W+(?:\w+\W+){0,3}?(((trad\w*)
+(strateg\w*|polic\w*) ((youth|young people)\W+(?:\w+\W+){0,3}?(employ\w*|unemploy\w*))|(employ\w*|unemploy\w*))\W+(?:\w+\W+){0,3}?(strateg\w*|polic\w*) ((youth|young people)

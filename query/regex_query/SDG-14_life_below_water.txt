@@ -1,0 +1,36 @@
+TS = ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "pollut*" OR "debris" OR "eutrophication*" OR "contaminat*" OR "waste" OR "plastic*" OR "microplastic*" OR "micro-plastic*" ) )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("ecosystem*" OR "biodivers*" OR "protection" OR "environmental degradation" ) )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("acidi*" OR "pH") )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("overfish*" OR "fisheries" OR "fishery" OR "fish stock*" OR "fishing") )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "protected" OR "conserv*" ) NEAR/3 ( "area*" ) ) )
+OR
+
+TS = ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "fish stock" ) )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND (( "sustainab*" ) NEAR/3 ( "fish*" OR "aquaculture*" OR "tourism*" )) )
+OR
+
+TS = ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "research" ) NEAR/3 ( "develop*" OR "budget*" OR "spending" ) ) ) OR
+
+TS = ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "knowledge" ) NEAR/3 ( "develop*" OR "increase*" ) ) ) OR
+
+TS = ( ( "ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ( ( "transfer" ) NEAR/3 ( "technology" ) ) )
+OR
+
+TS = ( ("small-scale") NEAR/3 ("fish*") )
+OR
+
+TS = ( ("ocean*" OR "marine" OR "coast*" OR "sea" OR "seas" OR "seawater*" OR "sea water*" OR "coral reef*" ) AND ("sustainab*" OR "preserv*" OR "conserv*" OR "protect*") AND ("jurisdiction*" OR "legal" OR "law*") ) OR
+
+TS = ( ("sustainab*" OR "preserv*" OR "conserv*" OR "protect*") AND ( "UNCLOS" OR "UN Convention on the Law of the Sea" OR "United Nations Convention on the Law of the Sea" ) )

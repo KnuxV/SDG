@@ -1,0 +1,57 @@
+(
+
+TS = ( ( "quality" OR "reliab*" OR "sustainab*" OR "resilient" ) NEAR/3 ( "infrastructure" ) ) OR
+
+TS = ( ( "economic development" OR "human well-being" ) AND ( "afford*" OR "equitable" ) ) OR
+
+TS = ( ( "rural" NEAR/3 "population*" NEAR/3 "road*" ) ) OR
+
+TS = ( ( ( "passenger*" OR "freight" ) NEAR/3 ( "transport" ) ) AND ( "volume*" ) )
+OR
+
+TS = ( ( "inclusi*" OR "sustainab*" ) NEAR/3 ( "industr*" ) ) OR
+
+TS = ( ( "share" ) NEAR/3 ( "employment" OR "GDP" OR "gross domestic product" ) NEAR/3 ( "industr*" ) ) OR
+
+TS = ( ( "manufacturing" NEAR/3 "value" ) NEAR/3 ( "per capita" OR "GDP" OR "gross domestic product" ) ) OR
+
+TS = ( ( "manufacturing employment" ) )
+OR
+
+TS = ( ( "small-scale industry*" OR "small enterprise*" OR "small entrepren*" OR "microenterprise*" OR "micro-enterprise*" ) AND ( "financ*" OR "credit*" OR "microcredit*" OR "micro-credit*" OR "micro-financ*" OR "microfinanc*" OR "loan*" ) ) OR
+
+TS = ( ( "small-scale industry*" OR "small enterprise*" OR "small entrepren*" OR "microenterprise*" OR "micro-enterprise*" ) AND ( "share" OR "proportion" ) )
+OR
+
+TS = ( ( "upgrade" OR "retrofit*" ) AND ( "infrastructur*" OR "industr*" ) AND ( "sustainab*" ) ) OR
+
+TS = ( ( "increas*" ) NEAR/3 ( "resource*" ) NEAR/3 ( "efficien*" ) ) OR
+
+TS = ( ( "clean" OR "environmentally sound" ) NEAR/3 ( "technolog*" OR "industr*" ) ) OR
+
+TS = ( ( "CO2 emission" AND "per unit" ) )
+OR
+
+TS = ( ( "enhance*" OR "upgrad*" OR "encourag*" ) AND ( "research*" OR "R-D" OR "research and development" OR "innovation" OR "technol* capabilit*" ) AND ( "develop* countr*" OR "least developed countr*" ) ) OR
+
+TS = ( ( "enhance*" OR "encourag*" ) NEAR/3 ( "innovation" ) ) OR
+
+TS = ( ( "research and development" OR "R-D") NEAR/3 ( "spending" OR "expenditure" OR "GDP" OR "gross domestic product" ) ) OR
+
+TS = ( ( "researcher*" ) AND ( "per million inhabitant*" ) )
+OR
+
+TS = ( ( ( "sustainab*" OR "resilien*" ) AND ( "infrastructur*" ) AND ( "develop*" ) ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" OR "Africa*" ) )
+OR
+
+TS = ( ( ( "support" OR "assist*" OR "aid*" ) NEAR/3 ( "research*" OR "research and development" OR "R-D" OR "innovati*" ) ) AND ( "develop* countr*" ) ) OR
+
+TS = ( ( "technology transfer" ) NEAR/3 ( "develop* countr*" OR "least developed countr*" ) ) OR
+
+TS = ( ( ( "medium-tech" OR "high-tech" ) NEAR/3 ( "industr*" )) AND ( "value*" ) )
+OR
+
+TS = ( ( "access" ) NEAR/3 ( "ICT" OR "information*" OR "communication*" OR "internet" OR "mobile" OR "wireless" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TS = ( ( ( "proportion" ) NEAR/3 ( "population" ) ) AND ( ( "mobile" ) NEAR/3 ( "network*" OR "technolog*" ) ) )
+)

@@ -1,0 +1,42 @@
+TS = ( ( ( "income*" ) NEAR/3 ( "growth*" ) ) AND ( "poorest" OR "disadvantaged" OR "marginali*" ) ) OR
+
+TS = ( ( ( "income*" ) NEAR/3 ( "equal*" OR "inequal*" OR "distribution" ) ) NEAR/3 ( "poorest" OR "disadvantaged" OR "marginali*" ) ) OR
+
+TS = ( ("growth rate*") NEAR/3 ("income*" OR "per capita" OR "household expenditure") )
+OR
+
+TS = ( ( "social*" OR "socioeconomic*" OR "economic*" OR "politic*" ) NEAR/3 ( "inclusion" OR "exclusion" ) )
+OR
+
+TS = ( ( "reduc*" ) NEAR/3 ( "equality" OR "inequalit*" ) NEAR/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) ) OR
+
+TS = ( ( "discriminat*" ) NEAR/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) ) OR
+
+TS = ( ( "opportun*" ) NEAR/3 ( "equal*" ) NEAR/3 ( "legislati*" OR "law*" OR "polic*" OR "action*" OR "practice*" ) )
+OR
+
+TS = ( ( ( "polic*" OR "legislati*" OR "law*" OR "action*" OR "practice*" ) NEAR/3 ( "fiscal" OR "wage*" OR "social protection" ) ) AND ( "equality" ) ) OR
+
+TS = ( ( ( "labour" OR "labor" OR "wage*" OR "social protection" ) NEAR/3 ( "share" ) ) AND ( "GDP" OR "gross domestic product" ) )
+OR
+
+TS = ( ( "regulat*" OR "monitor*" ) AND ( ( "global*" ) NEAR/6 ( "financial market*" OR "financial institution*" ) ) ) OR
+
+TS = ( ("Financial Soundness") AND ("Indicator*") )
+OR
+
+TS = ( ( ( "representation" OR "voice" OR "voting right*" ) NEAR/3 ( "international*" )) AND ( "developing countr*" ) )
+OR
+
+TS = ( ("migration polic*") )
+OR
+
+TS = ( ( "WTO" OR "World Trade Organization" OR "World Trade Organisation" ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) OR
+
+TS = ( ( ( ( "import*" OR "trad*" ) NEAR/3 ( "tarif*" ) ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) ) )
+OR
+
+TS = ( ( ( ( "development*" ) NEAR/3 ( "assist*" OR "support*" OR "program*" ) ) AND ( "develop* countr*" OR "least developed countr*" OR "small island*" ) AND ( "financial*" OR "donor" ) ) )
+OR
+
+TS = ( ( "remittance" ) AND ( "migrant*" OR "emigrant*" OR "immigrant*" ) )
