@@ -1,3 +1,5 @@
+import sys
+
 import pyautogui as pgui
 import time
 import pyperclip
@@ -13,27 +15,30 @@ def workaround_write(text):
     keyboards It copies the text to clipboard and pastes it, instead of
     typing it.
     """
-    pyperclip.copy(text)
+    a = pyperclip.copy(text)
     pgui.hotkey('ctrl', 'v')
-    pyperclip.copy('')
+    a = pyperclip.copy('')
 
 
-def main(coord: dict, setup_cord=False):
+def main(coord: dict, setup_cord=False, start_pubs=1):
     """
 
     :param coord:
     :param setup_cord:
     :return:
+
+    Args:
+        start_pubs:
+        start_pubs:
     """
     if not coord or setup_cord:
         coord = setup_original_coordinates()
     # To be changed if we don't start downloading from 1
-    record_from = 3501
-    record_to = 4000
+    record_from = start_pubs
+    record_to = record_from + 499
     # text_file_name
     root_file_name = 1
     end_file_name = "txt"
-
     total_number_pub = int(input("enter total number of publications :\n"))
     root_file_name = int(input("enter first title, 1 or whatever after the "
                                "first bunch of download : \n"))
@@ -55,19 +60,19 @@ def main(coord: dict, setup_cord=False):
         for i in range(10):
             pgui.press("backspace", interval=0.1)
         # Then, we write the number
-        # pgui.keyDown('shift')
-        # pgui.write(str(record_from))
-        # pgui.keyUp('shift')
-        workaround_write(record_from)
+        pgui.keyDown('shift')
+        pgui.write(str(record_from))
+        pgui.keyUp('shift')
+        # workaround_write(record_from)
 
         # Second box
         pgui.click(coord['records_from_button_position_second_box'])
         for i in range(10):
             pgui.press("backspace", interval=0.1)
-        # pgui.keyDown('shift')
-        # pgui.write(str(record_to))
-        # pgui.keyUp('shift')
-        workaround_write(record_to)
+        pgui.keyDown('shift')
+        pgui.write(str(record_to))
+        pgui.keyUp('shift')
+        # workaround_write(record_to)
 
         time.sleep(1)
         pgui.click(coord['record_content'])
@@ -106,6 +111,12 @@ def main(coord: dict, setup_cord=False):
 
 
 if __name__ == "__main__":
+    try:
+        setup = eval(sys.argv[1])
+        start_pubs = int(sys.argv[2])
+    except:
+        setup = False
+        start_pubs = 1
     coordinates = {'export_position': (906, 559),
                    'tab_delimited_file_position': (1033, 788),
                    'records_from_button_position': (812, 677),
@@ -126,4 +137,7 @@ if __name__ == "__main__":
                     'export': (1096, 940), 'above_save_button': (1571, 1149),
                     'ok': (1619, 1134), 'text_box': (1713, 377),
                     'save_button': (1786, 1152)}
-    main(coordinates, setup_cord=False)
+
+    office_half_screen = {'export_position': (720, 552), 'tab_delimited_file_position': (592, 797), 'records_from_button_position': (352, 809), 'records_from_button_position_first_box': (468, 813), 'records_from_button_position_second_box': (552, 806), 'record_content': (354, 947), 'full_record': (378, 1006), 'full_record_w_citations': (328, 1038), 'export': (332, 1002), 'above_save_button': (802, 949), 'ok': (1074, 963), 'text_box': (995, 176), 'save_button': (1080, 959)}
+
+    main(office_half_screen, setup_cord=setup, start_pubs=start_pubs)
