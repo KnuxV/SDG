@@ -37,6 +37,7 @@ def create_empty_folder():
         os.mkdir("data/raw/" + sdf)
 
 
+
 if __name__ == "__main__":
     # create_blank_files()
     convert_aurora_web_of_science()
