@@ -17,9 +17,12 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
 import numpy as np
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+# Global, enter your unistra/wos password
+password = "stuff"
 
 
 def click_button(driver, elem_path, how):
@@ -101,24 +104,23 @@ def login_wos(driver,
                        "wos/woscc/advanced-search"):
     driver.get(ini_path)
 
-    # el = WebDriverWait(driver, timeout=180).until(
-    #     lambda d: d.find_element(By.NAME, 'username'))
     wait_for_elem(driver, "username", how="name")
 
     username = driver.find_element(By.NAME, 'username')
     password = driver.find_element(By.NAME, "password")
 
     username.send_keys('michoud')
-    password.send_keys("Uy5MMm1<>hzL5k8")
+    password.send_keys(password)
 
     submit_button = driver.find_element(By.NAME, 'submit')
     submit_button.click()
 
     wait_for_elem(driver, "onetrust-reject-all-handler", how="id")
+
     reject_all_button = driver.find_element(By.ID,
                                             "onetrust-reject-all-handler")
-    reject_all_button.click()
-
+    # reject_all_button.click()
+    click_button(driver, '//*[@id="onetrust-reject-all-handler"]', "xpath")
     wait_for_elem(driver, "advancedSearchInputArea", how="id")
 
 
@@ -149,14 +151,18 @@ def get_total_pub(driver) -> int:
 
 def download_batch(driver, start_pub, end_pub, citations=True):
     """
-    Single cycle of download, aka 1000 for non citation batch,
-    or 500 if citations
-    :param driver:
-    :param start_pub:
-    :param end_pub: start_pub+499
-    :param citations: with or without citations
-    :return:
+
+    Args:
+        driver:
+        start_pub:
+        end_pub:
+        citations:
+        starts_at_one:
+
+    Returns:
+
     """
+
     time.sleep(2)
     export_button_path = "/html/body/app-wos/main/div/div/div[2]/div/div/" \
                          "div[2]/app-input-route/app-base-summary-component/" \
@@ -178,7 +184,6 @@ def download_batch(driver, start_pub, end_pub, citations=True):
     """tab_delimited_button = driver.find_element(By.ID, "exportToTabWinButton")
     tab_delimited_button.click()"""
 
-
     # click on record from
 
     path = '//*[@id="radio3-input"]'
@@ -190,32 +195,42 @@ def download_batch(driver, start_pub, end_pub, citations=True):
     driver.execute_script("arguments[0].click();", overlap)"""
 
     # click on record from
-    path = "/html/body/app-wos/main/div/div/div[2]/div/div/div[2]/" \
-           "app-input-route[1]/app-export-overlay/div/div[3]/div[2]/" \
-           "app-export-out-details/div/div[2]/form/div/fieldset/" \
-           "mat-radio-group/div[3]/mat-radio-button/label/span[1]/span[3]"
-    """record_from_circle = driver.find_element(By.XPATH, path)
-    overlap = get_overlapping_element(driver=driver, element=record_from_circle)
-    driver.execute_script("arguments[0].click();", overlap)"""
+    path = "/html/body/app-wos/main/div/div/div[2]/div/div/div[2]/app-input-route[1]/app-export-overlay/div/div[3]/div[2]/app-export-out-details/div/div[2]/form/div/fieldset/mat-radio-group/div[3]/mat-radio-button/label/span[2]"
+    record_from_path = '//*[@id="radio3-input"]'
+    wait_for_elem(driver, path, "xpath")
     click_button(driver, path, how="xpath")
+    click_button(driver, record_from_path, how="xpath")
+    first_box, second_box = driver.find_elements(By.XPATH, "//*[contains(@id, 'mat-input-')]")
 
-    # mat input increased by one after each iteration, for 2nd batch
-    # mat-input-3 and mat-input-4 for 2nd box
-    # So we define mat-input as a modulo 500 from end_pub which starts at 500
-    # We also take the round up number so that the last download is correct
-    def return_input(num):
-        nb = int(2 * np.ceil(num / 500))
-        return nb - 1, nb
+    # try:
+    #     int_mat_input = int(2 * (start_pub - 1) / 500)
+    #     driver.find_element(By.XPATH, f'//*[@id="mat-input-{int_mat_input}"]')
+    #     starts_at_one = False
+    # except NoSuchElementException:
+    #     starts_at_one = True
+    #
+    # # mat input increased by one after each iteration, for 2nd batch
+    # # mat-input-3 and mat-input-4 for 2nd box
+    # # So we define mat-input as a modulo 500 from end_pub which starts at 500
+    # # We also take the round up number so that the last download is correct
+    # def return_input(num, start):
+    #     nb = int(2 * np.ceil(num / 500))
+    #     # if starts_at_one:
+    #     #     return nb - 1, nb
+    #     # else:
+    #     #     return nb - 2, nb-1
+    #     return (nb - 1, nb) if start else (nb - 2, nb - 1)
+    #
+    # # First box
+    # first_box = driver.find_element(By.ID,
+    #                                 f"mat-input-{return_input(end_pub, starts_at_one)[0]}")
+    # # Second box
+    # second_box = driver.find_element(By.ID,
+    #                                  f"mat-input-{return_input(end_pub, starts_at_one)[1]}")
 
-    # First box
-    first_box = driver.find_element(By.ID,
-                                    f"mat-input-{return_input(end_pub)[0]}")
     first_box.clear()
     first_box.send_keys(int(start_pub))
 
-    # Second box
-    second_box = driver.find_element(By.ID,
-                                     f"mat-input-{return_input(end_pub)[1]}")
     second_box.clear()
     second_box.send_keys(int(end_pub))
 
@@ -246,14 +261,16 @@ def download_batch(driver, start_pub, end_pub, citations=True):
                 'app-input-route[1]/app-export-overlay/div/div[3]/div[2]/' \
                 'app-export-out-details/div/div[2]/form/div/div[2]/' \
                 'button[1]/span[1]'
-    """    final_export_button = driver.find_element(By.XPATH, test_path)
+    """    
+    final_export_button = driver.find_element(By.XPATH, test_path)
 
     overlap_export = get_overlapping_element(driver=driver,
                                              element=final_export_button)
     if overlap_export:
         driver.execute_script("arguments[0].click();", overlap_export)
     else:
-        final_export_button.click()"""
+        final_export_button.click()
+    """
     click_button(driver=driver, elem_path=test_path, how="xpath")
     # waiting till pop-up windows is gone before starting a new cycle
     window_path = "/html/body/app-wos/main/div/div/div[2]/div/div/div[2]/" \
@@ -267,7 +284,7 @@ def download_pubs(driver, total_pub, citations=True):
     record_from = 1
     if citations:
         revolution = 500
-        record_to = revolution
+        record_to = 500
     else:
         revolution = 500
         record_to = revolution
@@ -279,11 +296,11 @@ def download_pubs(driver, total_pub, citations=True):
         record_from += revolution
         record_to += revolution
 
-        if record_to > total_pub:
-            print("last download of the batch")
-            print(record_from, int(total_pub))
-            download_batch(driver, start_pub=record_from, end_pub=total_pub,
-                           citations=citations)
+    if record_to > total_pub:
+        print("last download of the batch")
+        print(record_from, int(total_pub))
+        download_batch(driver, start_pub=record_from, end_pub=total_pub,
+                       citations=citations)
 
 
 def run_download_sdg(sdg: int, target_lst=()):
@@ -297,6 +314,22 @@ def run_download_sdg(sdg: int, target_lst=()):
     df_query = pd.read_excel("query/aurora_wos_v2_extra.xlsx",
                              sheet_name=sdg_name, index_col=0).iloc[1:, :]
     print(df_query.Target.to_list())
+
+    # If ":" as an argument, it acts just like in a list. And download from the target before : until the target after :
+    # If nothing after :, it download until the last target of the sdg.
+    all_target = df_query.Target.to_list()
+    if ":" in target_lst:
+        if len(target_lst) == 2:
+            start = target_lst[0]
+            index_start = all_target.index(start)
+            print(index_start)
+            target_lst = all_target[index_start:]
+            print(target_lst)
+        elif len(target_lst) == 3:
+            index_start = all_target.index(target_lst[0])
+            finish = all_target.index(target_lst[2])
+            target_lst = all_target[index_start:all_target]
+
     for ind, row in df_query.iterrows():
         # unpacking from excel
         target, description, query, query_wos, total_pub, *links = row.to_list()
@@ -306,7 +339,6 @@ def run_download_sdg(sdg: int, target_lst=()):
                 f"Downloading SDG{sdg}\ntarget = {target}\ntotal_pubs = "
                 f"{int(total_pub)}")
             if total_pub < 100000:
-
                 run_download_target(
                     address="https://www-webofscience-com.scd-rproxy.u"
                             "-strasbg.fr"
@@ -318,6 +350,7 @@ def run_download_sdg(sdg: int, target_lst=()):
                 # that split the download with custom dates.
                 print("Above 100k pubs, special queries activated")
                 links = [link for link in links if str(link) != 'nan']
+                
                 for ind_link, link in enumerate(links):
                     print(f"Batch number {ind_link + 1} out of {len(links)}")
 
@@ -327,16 +360,24 @@ def run_download_sdg(sdg: int, target_lst=()):
 
 
 def run_download_target(address, sdg_name, target, query, total_pub):
-    path = f"/home/kevin-work/PycharmProjects/SDG_DST/data/raw/raw_sdg/" \
+    path = f"/home/office/PycharmProjects/SDG/data/raw/raw_sdg/" \
            f"{sdg_name}/{target.replace(' ', '')}"
     options = set_download_folder_firefox(path)
     driver = set_driver(options=options)
-    login_wos(driver=driver, ini_path=address)
+
     if query:
         # when more than 100k pubs, there's no query but custom ini_path
+        login_wos(driver=driver, ini_path=address)
         enter_query(driver=driver, query=query)
+    else:
+        driver.get(address)
+        wait_for_elem(driver, "onetrust-reject-all-handler", how="id")
+        click_button(driver, '//*[@id="onetrust-reject-all-handler"]', "xpath")
+        total_pub = get_total_pub(driver)
 
     download_pubs(driver, total_pub=total_pub, citations=True)
+
+    time.sleep(1)
     driver.close()
 
 
