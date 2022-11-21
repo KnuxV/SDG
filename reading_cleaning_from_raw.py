@@ -72,7 +72,8 @@ def concat_df(root_dir_path, sdg_number: int, dst_tag=""):
                 # columns with DST if the raw texts are DST related
 
                 if sdg_number != 0:
-                    df = add_sdg_cols(df, sdg_number)
+                    # df = add_sdg_cols(df, sdg_number)
+                    df['SDG'] = sdg_number
                 if dst_tag != "":
                     df = add_dst_cols(df, dst_tag)
 

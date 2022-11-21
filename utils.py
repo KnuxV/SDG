@@ -211,14 +211,14 @@ def c1_to_cn(dataframe: pd.DataFrame) -> pd.DataFrame:
 
     """
 
-    dataframe['CN'] = dataframe['C1'].swifter.apply(create_cn_string)
-    # dataframe['CN'] = create_CN_string(dataframe['C1'])
+    dataframe['CN'] = dataframe['C1'].apply(create_cn_string)
+
     return dataframe
 
 
 def add_sdg_cols(df: pd.DataFrame, sdg_number: int) -> pd.DataFrame:
     """
-
+    OLD method, create 17 columns with only one True for the SDG the pub is from
     Args:
         df (dataframe): a pandas dataframe
         sdg_number (int): the number corresponding to the sdg
