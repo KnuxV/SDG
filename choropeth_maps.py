@@ -52,7 +52,6 @@ def draw_choropeth(dataframe_mention: pd.DataFrame, dataframe_plot: pd.DataFrame
                                    "Eswatini": "Swaziland",
                                    "Guinea Bissau": "Guinea-Bissau",
                                    "Timor-Leste": "East Timor",
-                                   "South Korea": "South Korea"
                                    }
         if country in dic_countries_to_rename:
             return dic_countries_to_rename[country]

@@ -62,7 +62,7 @@ def count_publications(dataframe: pd.DataFrame, filter1: str, filter2: str, name
                             d["total_x"][elem] += 1
 
     elif filter1 in ["sdg", "cat", "dst"]:
-        for ind, row in dataframe.iterrows():
+        for row in dataframe.itertuples(index=False):
             for elem_x in dic_filter[filter1]:
                 if row[elem_x]:
                     d[elem_x]["total_y"] += 1
@@ -110,7 +110,7 @@ def count_publications(dataframe: pd.DataFrame, filter1: str, filter2: str, name
 
 
 if __name__ == "__main__":
-    # count_publications(df_eu, filter1="eu", filter2="sdg", name="test", save=True)
+    count_publications(df, filter1="eu", filter2="sdg", name="test", save=True)
     # count_publications(df_eu_dst, filter1="eu", filter2="dst", name="eu_dst", save=True)
     count_publications(df_dst, filter1="eu", filter2="dst", name="dst", save=True)
     # count_publications(df, filter1="continent", filter2="sdg", name="continent_sdg", save=True)
