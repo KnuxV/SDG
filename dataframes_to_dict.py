@@ -10,7 +10,7 @@ import json
 
 from tqdm import tqdm
 
-dic_dataframes = {'sdg': pd.read_pickle('data/dataframes/SDG/all_sdg_fixed_dst.pkl'),
+dic_dataframes = {'sdg': pd.read_pickle('data/dataframes/output/all_sdg_fixed_dst.pkl'),
                   'sdg_long': pd.read_csv('data/dataframes/SDG/SDG_georef_more10_moreNUTS.csv', sep=','),
                   'dt': pd.read_pickle('data/dataframes/digital/all_digital.pkl'),
                   'dt_long': pd.read_csv('data/dataframes/digital/digital_georef_more10_moreNUTS.csv', sep=',')}

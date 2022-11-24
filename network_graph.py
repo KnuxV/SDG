@@ -464,7 +464,7 @@ def draw_network_graph(dataframe, map_filter, save=False, folder="img/Commission
 
 if __name__ == "__main__":
 
-    df_sdg = pd.read_pickle("data/dataframes/SDG/all_sdg_fixed_dst.pkl")
+    df_sdg = pd.read_pickle("data/dataframes/output/all_sdg_fixed_dst.pkl")
     df_digital = pd.read_pickle("data/dataframes/digital/all_digital.pkl")
 
     draw_network_graph(dataframe=df_sdg, map_filter='World', save=True, name="SDG_world")

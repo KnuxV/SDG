@@ -105,7 +105,7 @@ def draw_choropeth(dataframe_mention: pd.DataFrame, dataframe_plot: pd.DataFrame
 
 if __name__ == "__main__":
     # Loading database
-    df_sdg = pd.read_pickle("data/dataframes/SDG/all_sdg_fixed_dst.pkl")
+    df_sdg = pd.read_pickle("data/dataframes/output/all_sdg_fixed_dst.pkl")
     df_sdg_dt = df_sdg[df_sdg['DST']]
     df_digital = pd.read_pickle("data/dataframes/digital/all_digital.pkl")
     for name, df in {"sdg": df_sdg, "sdg_dt": df_sdg_dt, "digital": df_digital}.items():

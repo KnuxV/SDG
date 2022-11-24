@@ -5,7 +5,7 @@ import pandas as pd
 from network_graph import actors_mention, actors_edge
 
 # Loading dataframes
-df_sdg = pd.read_pickle("data/dataframes/SDG/all_sdg_fixed_dst.pkl")
+df_sdg = pd.read_pickle("data/dataframes/output/all_sdg_fixed_dst.pkl")
 cond = df_sdg['DST']
 df_sdg_dt = df_sdg[cond]
 df_digital = pd.read_pickle("data/dataframes/digital/all_digital.pkl")

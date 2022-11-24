@@ -45,7 +45,7 @@ def main(df):
     # df = pd.read_pickle("data/dataframes/SDG/intersection_sdg_dt.pkl")
     columns = list(df.columns) + ['ANN', "ANN_DT", "ANN_SDG", "Relevance"]
     try:
-        df_new = pd.read_pickle("data/dataframes/SDG/manual_annotation_df.pkl")
+        df_new = pd.read_pickle("data/dataframes/output/manual_annotation_df.pkl")
     except FileNotFoundError:
         df_new = pd.DataFrame(data=None, columns=columns)
     original_size = len(df_new)
