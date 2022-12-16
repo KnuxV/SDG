@@ -13,7 +13,9 @@ from operator import or_, and_
 import swifter
 
 reg = re.compile(r"(\[(?P<authors>[^\[\]]+)])? (?P<country>[^\[\];]+);?")
-df_country = pd.read_excel("data/countries_full.xls")
+
+path_country = "/home/kevin-desktop/PycharmProjects/SDG/data/countries_full.xls"
+df_country = pd.read_excel(path_country)
 # Special rules for different spelling in WOS
 dic_country = {'Peoples R China': "China",
                'England': 'United Kingdom',
@@ -427,3 +429,5 @@ if __name__ == "__main__":
     df_sdg_dst.to_csv("data/output/sdg_dst.csv", header=True, index=False, sep="\t")
     df_all_digital_eu.to_csv("data/output/all_digital_europe.csv", header=True, index=False, sep="\t")
     """
+    pass
+

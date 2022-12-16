@@ -3,7 +3,7 @@ import sys
 import pyautogui as pgui
 import time
 import pyperclip
-
+import os
 from show_mouse_pos import setup_original_coordinates
 
 pgui.FAILSAFE = True
@@ -117,15 +117,8 @@ if __name__ == "__main__":
     except:
         setup = False
         start_pubs = 1
-    coordinates = {'export_position': (906, 559),
-                   'tab_delimited_file_position': (1033, 788),
-                   'records_from_button_position': (812, 677),
-                   'records_from_button_position_first_box': (922, 665),
-                   'records_from_button_position_second_box': (1008, 670),
-                   'record_content': (941, 805), 'full_record': (1024, 879),
-                   'full_record_w_citations': (1017, 912), 'export': (768, 871),
-                   'above_save_button': (1174, 1042), 'ok': (1391, 1062),
-                   'text_box': (1309, 100), 'save_button': (1384, 1060)}
+    coordinates = {'export_position': (1235, 596), 'tab_delimited_file_position': (1282, 864), 'records_from_button_position': (1148, 738), 'records_from_button_position_first_box': (1218, 750), 'records_from_button_position_second_box': (1305, 751), 'record_content': (1116, 871), 'full_record': (1102, 940), 'full_record_w_citations': (1103, 977), 'export': (1080, 932), 'above_save_button': (1598, 1148), 'ok': (1447, 253), 'text_box': (1492, 256), 'save_button': (1849, 256)}
+
     coord_big_pc = {'export_position': (1240, 555),
                     'tab_delimited_file_position': (1337, 794),
                     'records_from_button_position': (1118, 747),
@@ -140,4 +133,5 @@ if __name__ == "__main__":
 
     office_half_screen = {'export_position': (720, 552), 'tab_delimited_file_position': (592, 797), 'records_from_button_position': (352, 809), 'records_from_button_position_first_box': (468, 813), 'records_from_button_position_second_box': (552, 806), 'record_content': (354, 947), 'full_record': (378, 1006), 'full_record_w_citations': (328, 1038), 'export': (332, 1002), 'above_save_button': (802, 949), 'ok': (1074, 963), 'text_box': (995, 176), 'save_button': (1080, 959)}
 
-    main(office_half_screen, setup_cord=setup, start_pubs=start_pubs)
+    main(coordinates, setup_cord=setup, start_pubs=start_pubs)
+    os.system("shutdown")

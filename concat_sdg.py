@@ -41,9 +41,9 @@ def concat_sdg_duplicate(root_path: str, typ="DST") -> pd.DataFrame:
             df_tot = pd.concat([df_tot, df])
             df_tot['SDG' + str(ind + 1)] = np.where(df_tot['UT'].duplicated(keep=False), True,
                                                     df_tot['SDG' + str(ind + 1)])
-            df_tot.drop_duplicates(subset="UT", keep="first", inplace=True)
-            df_tot.drop_duplicates(subset="AB", keep="first", inplace=True)
-            df_tot.drop_duplicates(subset="TI", keep="first", inplace=True)
+        df_tot.drop_duplicates(subset="UT", keep="first", inplace=True)
+        df_tot.drop_duplicates(subset="AB", keep="first", inplace=True)
+        df_tot.drop_duplicates(subset="TI", keep="first", inplace=True)
         df_tot.reset_index(drop=True, inplace=True)
 
     elif typ == "DST":

@@ -14,7 +14,7 @@ import textwrap
 
 import termcolor
 
-df_query = pd.read_pickle("query/query.pkl")
+df_query = pd.read_pickle("/home/kevin-desktop/PycharmProjects/SDG/query/query.pkl")
 
 
 def to_raw(string):
@@ -23,21 +23,19 @@ def to_raw(string):
 
 def check_for_sdg(txt):
     res = []
-    for ind, row in df_query.iterrows():
-        if not row['Not']:
+    for sdg, target, query, not_query in df_query.itertuples(index=False, name=None):
+        if not not_query:
             try:
-                m = re.search(to_raw(row['Query']), txt, re.IGNORECASE)
+                m = re.search(to_raw(query), txt, re.IGNORECASE)
                 if m:
-                    res.append((row['SDG'], row['Query'], m.group()))
+                    res.append((sdg, target, m.group()))
             except:
-                m = None
                 print("error, weird query")
         else:
-            m = re.search(to_raw(row['Query']), txt, re.IGNORECASE)
-            m_not = re.search(to_raw(row['Not']), txt, re.IGNORECASE)
+            m = re.search(to_raw(query), txt, re.IGNORECASE)
+            m_not = re.search(to_raw(not_query), txt, re.IGNORECASE)
             if m and not m_not:
-                res.append((row['SDG'], row['Query'], m.group()))
-
+                res.append((sdg, target, m.group()))
     return res
 
 
@@ -131,6 +129,7 @@ def main(df):
 
 
 if __name__ == '__main__':
-    dataframe_path = sys.argv[1]
-    dataframe = pd.read_pickle(dataframe_path)
-    main(dataframe)
+    # dataframe_path = sys.argv[1]
+    # dataframe = pd.read_pickle(dataframe_path)
+    # main(dataframe)
+    pass

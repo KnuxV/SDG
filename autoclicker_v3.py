@@ -13,7 +13,8 @@ from selenium.common import NoSuchElementException, \
     StaleElementReferenceException
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.options import Options as Firefox_Options
+from selenium.webdriver.chrome.options import Options as Chrome_Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -22,7 +23,7 @@ import numpy as np
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 # Global, enter your unistra/wos password
-password = "stuff"
+pw = "stuff"
 
 
 def click_button(driver, elem_path, how):
@@ -83,7 +84,7 @@ def set_download_folder_firefox(folder_path):
     """
     p = pathlib.Path(folder_path)
     p.mkdir(parents=True, exist_ok=True)
-    options = Options()
+    options = Firefox_Options()
     options.set_preference("browser.download.folderList", 2)
     options.set_preference("browser.download.manager.showWhenStarting", False)
     options.set_preference("browser.download.dir", folder_path)
@@ -92,10 +93,34 @@ def set_download_folder_firefox(folder_path):
     return options
 
 
-def set_driver(options):
-    driver = webdriver.Firefox(
-        service=FirefoxService(GeckoDriverManager().install()),
-        options=options)
+def set_download_folder_chrome(folder_path):
+    """
+
+    :param folder_path:
+    :return: update the option of the firefox driver so that publications
+    are automatically saved to the given folder
+    """
+    p = pathlib.Path(folder_path)
+    p.mkdir(parents=True, exist_ok=True)
+    options = Chrome_Options()
+    options.set_preference("browser.download.folderList", 2)
+    options.set_preference("browser.download.manager.showWhenStarting", False)
+    options.set_preference("browser.download.dir", folder_path)
+    options.set_preference("browser.helperApps.neverAsk.saveToDisk",
+                           "application/x-gzip/txt/csv")
+    return options
+
+
+def set_driver(options, browser="chrome", path_driver='/home/kevin-desktop/Documents/chromedriver'):
+    if browser.lower() == "firefox":
+        driver = webdriver.Firefox(
+            service=FirefoxService(GeckoDriverManager().install()),
+            options=options)
+    elif browser.lower() == "chrome":
+        driver = webdriver.Chrome(path_driver)
+    else:
+        print("error setting up driver")
+        return None
     return driver
 
 
@@ -110,7 +135,7 @@ def login_wos(driver,
     password = driver.find_element(By.NAME, "password")
 
     username.send_keys('michoud')
-    password.send_keys(password)
+    password.send_keys(pw)
 
     submit_button = driver.find_element(By.NAME, 'submit')
     submit_button.click()
@@ -350,7 +375,7 @@ def run_download_sdg(sdg: int, target_lst=()):
                 # that split the download with custom dates.
                 print("Above 100k pubs, special queries activated")
                 links = [link for link in links if str(link) != 'nan']
-                
+
                 for ind_link, link in enumerate(links):
                     print(f"Batch number {ind_link + 1} out of {len(links)}")
 
@@ -379,6 +404,10 @@ def run_download_target(address, sdg_name, target, query, total_pub):
 
     time.sleep(1)
     driver.close()
+
+
+def run_download_dt():
+    pass
 
 
 if __name__ == '__main__':
