@@ -11,7 +11,7 @@ import tqdm
 from utils import c1_to_cn, trim_py
 
 
-def concat_all_pubs(root, save_folder, save_name):
+def concat_all_sdg_pubs(root, save_folder, save_name):
     # SDG
     # for sdg in tqdm.tqdm(os.listdir(root)):
     for sdg in tqdm.tqdm(os.listdir(root)):
