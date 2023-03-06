@@ -242,13 +242,21 @@ def remove_empty_from_set(dataframe, lst_column_names):
 
 
 if __name__ == '__main__':
-    df_sdg = pd.read_pickle("data/dataframes/new_sdg.pkl")
-    df_dt = pd.read_pickle("data/dataframes/new_dt.pkl")
+    folder = "data/raw_data/2021/AI"
+    df_ai_2021 = concat_df(root_dir_path=folder, sdg_number=0, dst_tag='AI', start_year=2021, end_year=2021)
+    df_ai_2021.drop(columns=['lst_SDG', "lst_Target"], inplace=True)
+    df_ai_2021.to_csv("/media/kevin-desktop/My Passport/SDG/data/AI_2021.csv", sep="\t")
 
-    df_concat = pd.concat([df_sdg, df_dt])
 
-    df_all_no_dups = handle_duplicates(df_concat, type_dups="both")
-    df_all_no_dups.to_pickle("data/dataframes/all_nodups.pkl")
+
+
+    # df_sdg = pd.read_pickle("data/dataframes/new_sdg.pkl")
+    # df_dt = pd.read_pickle("data/dataframes/new_dt.pkl")
+    #
+    # df_concat = pd.concat([df_sdg, df_dt])
+    #
+    # df_all_no_dups = handle_duplicates(df_concat, type_dups="both")
+    # df_all_no_dups.to_pickle("data/dataframes/all_nodups.pkl")
 
 
     # rootpath_2021 = "data/raw_data/2021/"

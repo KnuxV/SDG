@@ -1,53 +1,55 @@
-AI	big_data	IOT	computing_infrastructure	blockchain	robotics	additive_manufacturing
-Artificial intellig*	Apache Spark	Connected device*	Cloud application*	Altcoin	Autonomous car*	3D print*
-Automated reasoning	Apache Cassandra	Connected home*	Cloud architecture*	Bitcoin	Autonomous underwater vehicle*	3D prototyping
-Backpropagation 	Big data	Cyber-physical system*	Cloud broker	Blockchain*	Autonomous vehicle*	Additive fabrication
-Computer vision	Data center*	Human-machine interface*	Cloud client	Cryptocurrenc*	AUV	Additive layer manufacturing
-Data mining 	Data centre*	Hyper connectivity	Cloud computing	Private blockchain*	Chatbot*	Additive manufacturing
-Data science	Hadoop	Industrial internet of things	Cloud infrastructure*	Public blockchain*	Cybernetics	Direct digital manufacturing 
-Deep learning	Large-scale data*	Intelligent factor*	Cloud migration		Drone*	Industry 4.0
-Expert system*	MapReduce	Internet of everything	Cloud optimizer		Humanoid robot*	Layered manufacturing
-Face detection	Massive data*	Internet of things	Cloud portfolio		Manipulator*	Rapid prototyping
-Feature extraction	Apache Kafka	IoT	Cloud provider		Mobile manipulator*	Vat photopolymerization
-Generative adversarial network*	HBase	Machine-to-enterprise	Cloud server*		Mobile robot*	Material jetting
-Gesture recognition	BigTable	Machine-to-human	Cloud service*		Robot*	Binder jetting
-Image classification	Docker	Machine-to-machine	Cloud sourcing		Robotic*	Powder bed fusion
-Image recognition	Apache Hive	Pervasive sensing	Cloud storage		Self-driving car*	Material extrusion
-Image segmentation	Distributed file system*	Sensor network*	Cloud platform*		Self-driving vehicle*	Directed energy deposition
-Information retrieval		Smart device*	Community cloud*		UAV	Sheet lamination
-Intelligent machine*		Smart factor*	Dynamic cloud*		UGV	Composite filament fabrication
-Kernel machine		Smart home*	Federated cloud*		Uncrewed vehicle*	Continuous liquid interface production
-Knowledge representation		Smart sensor*	Hybrid cloud*		Unmanned aerial vehicle*	Direct ink writing
-Machine intelligence		Wearable*	Infrastructure as a service		Unmanned air vehicle*	Direct metal laser sintering
-Machine learning		Wireless body area network*	Inter-cloud computing		Unmanned aircraft system*	Directed energy deposition
-Machine translation		Wireless sensor network*	Multi-cloud*		Unmanned ground vehicle*	Electron-beam freeform fabrication
-Meta-learning			On-demand computing		Unmanned spacecraft	Electron-beam melting
-Multilayer perceptron*			Platform as a service		Unmanned underwater vehicles*	Fused deposition modeling
-Natural language processing			Private cloud*		Unmanned vehicle*	Fused filament fabrication
-Neural net*			Public cloud*			Laminated object manufacturing
-Object detection			Software as a service			Robocasting
-Object identification			Distributed computing			Selective laser melting
-Object recognition			Parallel computing			Selective laser sintering
-Pattern recognition			Decentralized computing			Stereolithography
-Pose estimation			Edge computing			
-Reinforcement learning			Fog computing			
-Semantic search			Grid computing			
-Semi-supervised learning			Cluster computing			
-Sentiment analysis			Massively parallel processing			
-Speech recognition			Dew Computing			
-Statistical learning			Cognitive comput*			
-Supervised learning			Cyberinfrastructure*			
-Text classification			Data-intensive comput*			
-Transfer learning			Hardware accelerator*			
-Transformer network*			High performance comput*			
-Unsupervised learning			Neuromorphic comput*			
-Voice recognition			Optical comput*			
-TensorFlow			Photonic comput*			
-Keras			Quantum comput*			
-PyTorch			Real-time comput*			
-amrv			Supercomput*			
-Artificial realit*			5G			
-Augmented realit*			5th generation mobile			
-Computer-mediated realit*			Fifth generation mobile			
-Mixed realit*			5G networks			
-Virtual realit*						
+AI,big_data,IOT,computing_infrastructure,blockchain,robotics,additive_manufacturing
+Artificial intellig*,Apache Spark,Connected device*,Cloud application*,Altcoin,Autonomous car*,3D print*
+Automated reasoning,Apache Cassandra,Connected home*,Cloud architecture*,Bitcoin,Autonomous underwater vehicle*,3D prototyping
+Backpropagation ,Big data,Cyber physical system*,Cloud broker,Blockchain*,Autonomous vehicle*,Additive fabrication
+Computer vision,Data center*,Human machine interface*,Cloud client,Cryptocurrenc*,AUV,Additive layer manufacturing
+Data mining,Data centre*,Hyper connectivity,Cloud computing,Private blockchain*,Chatbot*,Additive manufacturing
+Data science,Hadoop,Industrial internet of things,Cloud infrastructure*,Public blockchain*,Cybernetics,Direct digital manufacturing 
+Deep learning,Large scale data*,Intelligent factor*,Cloud migration,,Drone*,Industry 4.0
+Expert system*,MapReduce,Internet of everything,Cloud optimizer,,Humanoid robot*,Layered manufacturing
+Face detection,Massive data*,Internet of things,Cloud portfolio,,Manipulator*,Rapid prototyping
+Feature extraction,Apache Kafka,IoT,Cloud provider,,Mobile manipulator*,Vat photopolymerization
+Generative adversarial network*,HBase,Machine to enterprise,Cloud server*,,Mobile robot*,Material jetting
+Gesture recognition,BigTable,Machine to human,Cloud service*,,Robot*,Binder jetting
+Image classification,Docker,Machine to machine,Cloud sourcing,,Robotic*,Powder bed fusion
+Image recognition,Apache Hive,Pervasive sensing,Cloud storage,,Self driving car*,Material extrusion
+Image segmentation,Distributed file system*,Sensor network*,Cloud platform*,,Self driving vehicle*,Directed energy deposition
+Information retrieval,,Smart device*,Community cloud*,,UAV,Sheet lamination
+Intelligent machine*,,Smart factor*,Dynamic cloud*,,UGV,Composite filament fabrication
+Kernel machine,,Smart home*,Federated cloud*,,Uncrewed vehicle*,Continuous liquid interface production
+Knowledge representation,,Smart sensor*,Hybrid cloud*,,Unmanned aerial vehicle*,Direct ink writing
+Machine intelligence,,Wearable*,Infrastructure as a service,,Unmanned air vehicle*,Direct metal laser sintering
+Machine learning,,Wireless body area network*,Inter cloud computing,,Unmanned aircraft system*,Directed energy deposition
+Machine translation,,Wireless sensor network*,Multi cloud*,,Unmanned ground vehicle*,Electron beam freeform fabrication
+Meta learning,,Wireless sensor and actor network*,On demand computing,,Unmanned spacecraft,Electron beam melting
+Multilayer perceptron*,,,Platform as a service,,Unmanned underwater vehicles*,Fused deposition modeling
+Natural language processing,,,Private cloud*,,Unmanned vehicle*,Fused filament fabrication
+Neural net*,,,Public cloud*,,,Laminated object manufacturing
+Neural net*,,,Cloud based computing,,,4.0 industrial development
+Object detection,,,Software as a service,,,Robocasting
+Object identification,,,Distributed computing,,,Selective laser melting
+Object recognition,,,Parallel computing,,,Selective laser sintering
+Pattern recognition,,,Decentralized computing,,,Stereolithography
+Pose estimation,,,Edge computing,,,
+Reinforcement learning,,,Fog computing,,,
+Semantic search,,,Grid computing,,,
+Semi supervised learning,,,Cluster computing,,,
+Sentiment analysis,,,Massively parallel processing,,,
+Speech recognition,,,Dew Computing,,,
+Statistical learning,,,Cognitive comput*,,,
+Supervised learning,,,Cyberinfrastructure*,,,
+Text classification,,,Data intensive comput*,,,
+Transfer learning,,,Hardware accelerator*,,,
+Transformer network*,,,High performance comput*,,,
+Unsupervised learning,,,Neuromorphic comput*,,,
+Voice recognition,,,Optical comput*,,,
+TensorFlow,,,Photonic comput*,,,
+Keras,,,Quantum comput*,,,
+PyTorch,,,Real time comput*,,,
+amrv,,,Supercomput*,,,
+Artificial realit*,,,5G,,,
+Augmented realit*,,,5th generation mobile,,,
+Computer mediated realit*,,,Fifth generation mobile,,,
+Mixed realit*,,,5G networks,,,
+Virtual realit*,,,Smart grid,,,
+Data mining,,,,,,

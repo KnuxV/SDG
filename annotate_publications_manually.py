@@ -129,7 +129,6 @@ def main(df):
 
 
 if __name__ == '__main__':
-    # dataframe_path = sys.argv[1]
-    # dataframe = pd.read_pickle(dataframe_path)
-    # main(dataframe)
-    pass
+    dataframe_path = sys.argv[1]
+    dataframe = pd.read_pickle(dataframe_path)
+    main(dataframe)

@@ -1,16 +1,16 @@
 """
 Functions
 """
-import os
+
 from collections import defaultdict
-from typing import List
+from typing import List, Optional
 
 import numpy as np
 import pandas as pd
 import re
 from functools import reduce
 from operator import or_, and_
-import swifter
+
 
 reg = re.compile(r"(\[(?P<authors>[^\[\]]+)])? (?P<country>[^\[\];]+);?")
 
@@ -60,6 +60,13 @@ dic_country = {'Peoples R China': "China",
                'St Martin': 'Sint Maarten',
                }
 
+# Load Excel file with macro-related information
+macro_wos = pd.read_excel("data/macro_wos_cat.xlsx")
+dic_macro = {}
+for col in macro_wos.columns:
+    for cat in macro_wos[col].dropna().to_list():
+        dic_macro[cat] = col
+
 
 def trim_py(df, start_year, end_year, inclusive="both"):
     """
@@ -77,7 +84,7 @@ def trim_py(df, start_year, end_year, inclusive="both"):
     Returns
     -------
     def_new
-        a datagrame where the PY column is restricted between the two dates
+        a dataframe where the PY column is restricted between the two dates
 
     """
     df_new = df
@@ -283,7 +290,7 @@ def save_df(df, path, typ="pickle", header=True, index=False, sep="\t",
     ----------
     columns
     typ : str
-        picke or csv
+        pickle or csv
     df : dataframe
         that needs to be saved
     path : a path
@@ -311,7 +318,7 @@ def save_df(df, path, typ="pickle", header=True, index=False, sep="\t",
 
 def add_type_sdg_cat(df: pd.DataFrame) -> pd.DataFrame:
     """
-    add three columns Society / Economy / Environment depending to the df
+    add three columns Society / Economy / Environment depending upon the df
     according to SDGs
 
     Args:
@@ -419,15 +426,50 @@ def filter_for_eu_countries(dataframe: pd.DataFrame, extended=True, how="filter"
         return pd.Dataframe()
 
 
-if __name__ == "__main__":
-    """
-    df_all_dst = pd.read_pickle("data/output/all_sdg.pkl")
-    df_sdg_dst = pd.read_pickle("data/output/sdg_dst.pkl")
-    df_all_digital_eu = pd.read_pickle("data/output/all_digital_europe.pkl")
+def extra_bool_columns(dataframe):
+    # SDG, DT, Intersection,  Env, Eco, Soc columns
+    cond_soc = dataframe['SDG1'] + dataframe['SDG2'] + dataframe['SDG3'] + dataframe['SDG4'] + dataframe['SDG5'] \
+               + dataframe['SDG6'] + dataframe['SDG7'] + dataframe['SDG11'] + dataframe['SDG16']
+    dataframe.loc[:, 'Society'] = cond_soc
 
-    df_all_dst.to_csv("data/output/all_sdg.csv",header=True, index=False, sep="\t")
-    df_sdg_dst.to_csv("data/output/sdg_dst.csv", header=True, index=False, sep="\t")
-    df_all_digital_eu.to_csv("data/output/all_digital_europe.csv", header=True, index=False, sep="\t")
-    """
-    pass
+    cond_eco = dataframe['SDG8'] + dataframe['SDG9'] + dataframe['SDG10'] + dataframe['SDG12'] + dataframe['SDG17']
+    dataframe.loc[:, 'Economy'] = cond_eco
 
+    cond_env = dataframe['SDG13'] + dataframe['SDG14'] + dataframe['SDG15']
+    dataframe.loc[:, 'Environment'] = cond_env
+
+    cond_sdg = (dataframe['Environment'] + dataframe['Economy'] + dataframe['Society']) > 0
+    dataframe.loc[:, 'SDG'] = np.where(cond_sdg, 1, 0)
+
+    cond_dt = (dataframe['AI'] + dataframe['big_data'] + dataframe['computing_infrastructure'] +
+               dataframe['IOT'] + dataframe['robotics'] + dataframe['blockchain']
+               + dataframe['additive_manufacturing']) > 0
+    dataframe.loc[:, 'DT'] = np.where(cond_dt, 1, 0)
+
+    cond_inter = (dataframe['SDG'] > 0) & (dataframe['DT'] > 0)
+    dataframe['Intersection'] = np.where(cond_inter, 1, 0)
+
+
+def sc_to_macro_categories(str_cat: str) -> Optional[str]:
+    """
+    This function creates uses the SC column (Keyword related) to generate the content for a new macro categories
+    where there is only 5 possibilities (Technology, Social Sciences, Physical Sciences, Life Sciences & Biomedecine
+    Arts & Humanities).
+    Use this line of code to add the categories
+    df_ai_2022['Macro'] = df_ai_2022['SC'].swifter.apply(sc_to_macro_categories)
+    Args:
+        str_cat (str): content of the SC categories
+
+    Returns:
+        a string or None, the conversion of the SC keywords into one of the 5 macro categories
+
+    """
+
+    if type(str_cat) != str:
+        return None
+    set_macro_cats = set()
+    lst_cat = str_cat.split("; ")
+    for elem in lst_cat:
+        if elem in dic_macro:
+            set_macro_cats.add(dic_macro[elem])
+    return "; ".join(list(set_macro_cats))

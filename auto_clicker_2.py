@@ -20,6 +20,11 @@ def workaround_write(text):
     a = pyperclip.copy('')
 
 
+def erase():
+    pgui.hotkey('ctrl', 'a')
+    pgui.press("backspace", interval=0.1)
+
+
 def main(coord: dict, setup_cord=False, start_pubs=1):
     """
 
@@ -57,22 +62,24 @@ def main(coord: dict, setup_cord=False, start_pubs=1):
         pgui.click(coord['records_from_button_position_first_box'])
         time.sleep(0.1)
         # First, we need to empty the box from text
-        for i in range(10):
-            pgui.press("backspace", interval=0.1)
+        # for i in range(10):
+        #     pgui.press("backspace", interval=0.1)
+        erase()
         # Then, we write the number
-        pgui.keyDown('shift')
-        pgui.write(str(record_from))
-        pgui.keyUp('shift')
-        # workaround_write(record_from)
+        # pgui.keyDown('shift')
+        # pgui.write(str(record_from))
+        # pgui.keyUp('shift')
+        workaround_write(record_from)
 
         # Second box
         pgui.click(coord['records_from_button_position_second_box'])
-        for i in range(10):
-            pgui.press("backspace", interval=0.1)
-        pgui.keyDown('shift')
-        pgui.write(str(record_to))
-        pgui.keyUp('shift')
-        # workaround_write(record_to)
+        # for i in range(10):
+        #     pgui.press("backspace", interval=0.1)
+        erase()
+        # pgui.keyDown('shift')
+        # pgui.write(str(record_to))
+        # pgui.keyUp('shift')
+        workaround_write(record_to)
 
         time.sleep(1)
         pgui.click(coord['record_content'])
@@ -89,8 +96,7 @@ def main(coord: dict, setup_cord=False, start_pubs=1):
 
         # click on the text box, erase, and write new file name
         pgui.click(coord['text_box'])
-        pgui.hotkey('ctrl', 'a')
-        pgui.press('backspace')
+        erase()
         pgui.keyDown('shift')
         pgui.write(str(root_file_name))
         pgui.write('.')
@@ -117,21 +123,27 @@ if __name__ == "__main__":
     except:
         setup = False
         start_pubs = 1
-    coordinates = {'export_position': (1235, 596), 'tab_delimited_file_position': (1282, 864), 'records_from_button_position': (1148, 738), 'records_from_button_position_first_box': (1218, 750), 'records_from_button_position_second_box': (1305, 751), 'record_content': (1116, 871), 'full_record': (1102, 940), 'full_record_w_citations': (1103, 977), 'export': (1080, 932), 'above_save_button': (1598, 1148), 'ok': (1447, 253), 'text_box': (1492, 256), 'save_button': (1849, 256)}
+    coordinates = {'export_position': (1235, 596), 'tab_delimited_file_position': (1282, 864),
+                   'records_from_button_position': (1148, 738), 'records_from_button_position_first_box': (1218, 750),
+                   'records_from_button_position_second_box': (1305, 751), 'record_content': (1116, 871),
+                   'full_record': (1102, 940), 'full_record_w_citations': (1103, 977), 'export': (1080, 932),
+                   'above_save_button': (1598, 1148), 'ok': (1447, 253), 'text_box': (1492, 256),
+                   'save_button': (1849, 256)}
 
-    coord_big_pc = {'export_position': (1240, 555),
-                    'tab_delimited_file_position': (1337, 794),
-                    'records_from_button_position': (1118, 747),
-                    'records_from_button_position_first_box': (1242, 748),
-                    'records_from_button_position_second_box': (1320, 745),
-                    'record_content': (1350, 872),
-                    'full_record': (1363, 953),
-                    'full_record_w_citations': (1358, 987),
-                    'export': (1096, 940), 'above_save_button': (1571, 1149),
-                    'ok': (1619, 1134), 'text_box': (1713, 377),
-                    'save_button': (1786, 1152)}
+    coord_big_pc = {'export_position': (1214, 564), 'tab_delimited_file_position': (1233, 775),
+                    'records_from_button_position': (1141, 743), 'records_from_button_position_first_box': (1224, 735),
+                    'records_from_button_position_second_box': (1313, 732), 'record_content': (1110, 871),
+                    'full_record': (1078, 948), 'full_record_w_citations': (1066, 980), 'export': (1090, 940),
+                    'above_save_button': (1566, 1088), 'ok': (1794, 1099), 'text_box': (1652, 328),
+                    'save_button': (1810, 1104)}
 
-    office_half_screen = {'export_position': (720, 552), 'tab_delimited_file_position': (592, 797), 'records_from_button_position': (352, 809), 'records_from_button_position_first_box': (468, 813), 'records_from_button_position_second_box': (552, 806), 'record_content': (354, 947), 'full_record': (378, 1006), 'full_record_w_citations': (328, 1038), 'export': (332, 1002), 'above_save_button': (802, 949), 'ok': (1074, 963), 'text_box': (995, 176), 'save_button': (1080, 959)}
+    office_half_screen = {'export_position': (720, 552), 'tab_delimited_file_position': (592, 797),
+                          'records_from_button_position': (352, 809),
+                          'records_from_button_position_first_box': (468, 813),
+                          'records_from_button_position_second_box': (552, 806), 'record_content': (354, 947),
+                          'full_record': (378, 1006), 'full_record_w_citations': (328, 1038), 'export': (332, 1002),
+                          'above_save_button': (802, 949), 'ok': (1074, 963), 'text_box': (995, 176),
+                          'save_button': (1080, 959)}
 
-    main(coordinates, setup_cord=setup, start_pubs=start_pubs)
-    os.system("shutdown")
+    main(coord_big_pc, setup_cord=setup, start_pubs=start_pubs)
+    # os.system("shutdown")
